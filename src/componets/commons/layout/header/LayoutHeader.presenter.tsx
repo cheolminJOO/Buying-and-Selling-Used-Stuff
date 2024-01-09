@@ -1,0 +1,65 @@
+import { MouseEvent } from "react"
+import * as S from "./LayoutHeader.styles"
+
+interface ILayoutHeaderUIProps  {
+onClickLogin : (event : MouseEvent<HTMLDivElement>) => void
+onClickImg :(event : MouseEvent<HTMLImageElement>) => void
+onClickLogout :(event : MouseEvent<HTMLButtonElement>) => void
+onClickClose :(event : MouseEvent<HTMLButtonElement>) => void
+onClickMoveToPage : any
+isEdit : boolean
+result : any
+accessToken : any
+data : any
+isActive : boolean
+
+}
+
+
+export default function LayoutHeaderUI (props: ILayoutHeaderUIProps ) {
+
+  return (
+    <S.Wrapper>
+      <S.InnerWrapper>
+        <S.Logo onClick={props.onClickMoveToPage('/boards')}>
+        💎 EPL
+        </S.Logo>
+        <S.WrapperRight>
+          {props.accessToken && (
+          <S.Settings>
+            <S.ImgStyleWrapper>
+            <S.LeftWrapper>
+            <S.ImgStyle 
+            onClick={props.onClickImg}
+            src={props.data?.fetchUserLoggedIn.picture}/>
+            <S.Nickname>{props.data?.fetchUserLoggedIn.name}</S.Nickname>
+            </S.LeftWrapper>
+            
+            {props.isActive && (
+              <S.ButtonWrapper>
+            <S.MypageBtn onClick={props.onClickMoveToPage('/mypage')}>마이페이지</S.MypageBtn>
+            <S.LogoutBtn onClick = {props.onClickLogout}>로그아웃</S.LogoutBtn>
+            <S.CloseBtn onClick ={props.onClickClose}>닫기</S.CloseBtn>
+            </S.ButtonWrapper>
+            )}
+            {!props.isActive && (
+              <span></span>
+            )}
+          </S.ImgStyleWrapper>
+          </S.Settings>
+          )}
+          {!props.accessToken &&(
+          <S.LoginBtn onClick={props.onClickLogin}>
+          로그인하기
+          </S.LoginBtn>
+          )}
+
+
+          <S.SignUpBtn onClick={props.onClickMoveToPage('/sign')}>
+            {props.result ? "" : "로그인"}  
+          </S.SignUpBtn>
+        </S.WrapperRight>
+      </S.InnerWrapper>
+    </S.Wrapper>
+  )
+}
