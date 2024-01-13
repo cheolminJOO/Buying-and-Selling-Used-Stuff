@@ -21,7 +21,6 @@ export const BodyBox = styled.div`
 `
 export const WriterImg = styled.div`
 
-  <img src="/
 `
 
 export const EtcBox = styled.div`
@@ -57,8 +56,8 @@ export const BigGrayBox = styled.div`
 export const Word = styled.div`
   margin-top : 50px;
   font-size : 16px;
-  font-weight : 400
-  line-height : 23.68px
+  font-weight : 400;
+  line-height : 23.68px;
   width:996px;
   height : 96px;
 `
@@ -102,7 +101,7 @@ export const Title = styled.div`
   text-align : center;
   margin : 30px 0;
   font-size : 36px;
-  font-weight : 700
+  font-weight : 700;
   width : 174px;
   height : 53px;
 `
@@ -208,7 +207,7 @@ export const GrayBox = styled.div`
   margin-right : 20px;
 `
 export const MainSetting = styled.div`
-  width : 159px
+  width : 159px;
   height : 64px;
 
 `
