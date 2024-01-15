@@ -7,7 +7,7 @@ export default function LoginPageUI(props) {
         ID 입력: 
         <input
           type="text"
-          onChange={props.register("email")}
+          {...props.register("email")}
         />
       </div>
       <div>{props.errorEmail}</div>
@@ -16,7 +16,7 @@ export default function LoginPageUI(props) {
         비밀번호 입력: 
         <input
           type="password"
-          onChange={props.register("password")}
+          {...props.register("password")}
         />
       </div>
       <div>{props.errorPassword}</div>

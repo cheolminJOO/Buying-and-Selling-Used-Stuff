@@ -43,6 +43,7 @@ console.log("나도 찍히니?")
 
   const onClickLogout = (event : MouseEvent<HTMLButtonElement>) => {
     setAccessToken("")
+    setIsActive(false)
   }
 
   const onClickClose = (event : MouseEvent<HTMLButtonElement>) => {

@@ -1,5 +1,6 @@
 import { MouseEvent } from "react"
 import * as S from "./LayoutHeader.styles"
+import { string } from "prop-types"
 
 interface ILayoutHeaderUIProps  {
 onClickLogin : (event : MouseEvent<HTMLDivElement>) => void
@@ -12,6 +13,7 @@ result : any
 accessToken : any
 data : any
 isActive : boolean
+token : string
 
 }
 

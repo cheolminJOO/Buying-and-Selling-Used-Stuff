@@ -7,8 +7,12 @@ import { IMutation, IMutationDeleteUseditemQuestionArgs } from '../../../../../t
 import { CREATE_USEDITEM_QUESTION_ANSWER, DELETE_USEDITEM_QUESTION, FETCH_USEDITEM_QUESTION } from './ItemConmmentList.queries'
 import { useRouter } from 'next/router'
 import CommentAnswerPage from '../QandA/ItemCommentQandA.container'
-export default function ItemCommentListUI 
-(props) {
+import React from 'react';
+interface ItemCommentListUIProps {
+  el: any; // 또는 실제 타입으로 변경
+}
+
+const ItemCommentListUI: React.FC<ItemCommentListUIProps> = ({ el }) => {
   
   const[isActive, setIsActive] = useState(false)
   const router = useRouter()
@@ -18,13 +22,12 @@ export default function ItemCommentListUI
 
   const onClickEditBtn = () => {
     setIsEdit(true)
-    console.log(props.el)
   }
 
   const onClickDeleteBtn = async() => {
   const result = await deleteUseditemQuestion({
     variables: {
-      useditemQuestionId : props.el._id
+      useditemQuestionId : el._id
     },
     refetchQueries: [{
       query: FETCH_USEDITEM_QUESTION,
@@ -43,20 +46,20 @@ export default function ItemCommentListUI
     <S.BigWrapper>
       <S.Wrapper>
         <S.LeftContentsWrapper>
-          <S.AvatarImg src={props.el.user.picture}/>
+          <S.AvatarImg src={el.user.picture}/>
             <S.TextWrapper>
               <S.Writer>
-                {props.el.user.name}
+                {el.user.name}
               </S.Writer>
               <S.Contents>
-                {props.el.contents}
+                {el.contents}
               </S.Contents>
               <S.Date>
-                {getDate(props.el.createdAt)}
+                {getDate(el.createdAt)}
               </S.Date>
                                 
               <CommentAnswerPage
-              el={props.el}
+              el={el}
               isActive={isActive}
               setIsActive={setIsActive}/>
   
@@ -80,7 +83,7 @@ export default function ItemCommentListUI
     {isEdit && (
       <ItemCommentPage
       isEdit={isEdit}
-      el={props.el}
+      el={el}
       setIsEdit={setIsEdit}
 
       />
@@ -89,3 +92,4 @@ export default function ItemCommentListUI
     </div>
   )
 }
+export default ItemCommentListUI;
