@@ -5,8 +5,8 @@ export const Wrapper = styled.div`
 `;
 
 export const SliderItem = styled.img`
-  height: 200px;
-  width: 200px;
+  height: 350px;
+  width: 300px;
   margin: auto;
 
 `;

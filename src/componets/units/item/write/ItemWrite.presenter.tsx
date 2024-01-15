@@ -38,7 +38,7 @@ export default function ItemWriteUI (props) {
           {...props.register('desc')}
           defaultValue={props.data?.fetchUseditem?.contents}
           placeholder='상품을 설명해주세요.'>
-          <S.FormState>{props.isEdit ? "":props.formState.errors.desc?.message}</S.FormState>
+          {/* <S.FormState>{props.isEdit ? "":props.formState.errors.desc?.message}</S.FormState> */}
             
           </S.TextArea>
 

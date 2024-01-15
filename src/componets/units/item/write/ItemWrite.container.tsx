@@ -41,10 +41,12 @@ export default function ItemWrite (props) {
       alert("바뀐 내용이 없습니다. 다시 시도해주세요")
     }
 
+    console.log(data)
+
     const updateUseditemInput : IUpdateUseditemInput = {}
     if(data.name) updateUseditemInput.name =  data.name
     if(data.summary) updateUseditemInput.remarks = data.summary
-    if(data.aa) updateUseditemInput.contents = data.aa
+    if(data.desc) updateUseditemInput.contents = data.desc
     if(Number(data.price)) updateUseditemInput.price = Number(data.price) 
 
   try {
@@ -72,7 +74,7 @@ console.log(data)
         createUseditemInput : {
           name : data.name,
           remarks : data.summary,
-          contents : data.aa,
+          contents : data.desc,
           tags : data.tag,
           price : Number(data.price),
           images : [...fileUrls],

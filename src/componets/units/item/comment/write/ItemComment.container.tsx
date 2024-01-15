@@ -25,8 +25,8 @@ export default function ItemCommentPage(props) {
         createUseditemQuestionInput:{
           contents
         },
-      },
         useditemId : router.query.boardId,
+      },
       refetchQueries: [{
         query: FETCH_USEDITEM_QUESTION,
         variables: {useditemId : router.query.boardId}

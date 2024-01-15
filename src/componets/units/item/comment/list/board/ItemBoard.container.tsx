@@ -34,12 +34,10 @@ export default function ItemBoard () {
   }
 
   const onClickDetailedPage = async(event) => {
-    console.log("이벤트탈겟아이디", event.target.id)
   await router.push(`/item/${event.target.id}`)
   }
 
-
-  console.log("리렌더링중")
+  
   const onClickMoveToBoardNew = () => {
     router.push("/item/new")
   }
