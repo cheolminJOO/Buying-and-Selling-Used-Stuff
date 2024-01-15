@@ -103,9 +103,7 @@ export default function TestPageUi (props) {
         <input type='radio'/>유투브
         <input type='radio'/>사진
       </S.MainSetting>
-      <S.Btn 
-          type="submit"
-      >{props.isEdit ? "수정하기" : "등록하기"}</S.Btn>
+      <S.Btn type="submit">{props.isEdit ? "수정하기" : "등록하기"}</S.Btn>
   </S.Box>
   <input 
   ref={props.aaa} 
