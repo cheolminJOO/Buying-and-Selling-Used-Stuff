@@ -43,6 +43,11 @@ export const InputName = styled.div`
   
 `
 
+export const SearchWrapper = styled.div`
+  
+  
+`
+
 export const InputBox = styled.input`
   width: 996px;
   height:52px;
@@ -56,13 +61,14 @@ export const TextArea = styled.textarea`
 
 export const MapBigWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   
 
 `
 
 export const MapWrapper = styled.div`
-  width : 384px;
-  height: 292px;
+  width : 1000px;
+  height: 400px;
 
 `
 
@@ -76,12 +82,19 @@ export const GpsWrapper = styled.div`
   margin-left: 30px;
   width: 272px;
   height: 92px;
+  margin-bottom: 50px;
+  display: flex;
 
 
 `
 
 export const LATLNGWrapper = styled.div`
-  
+  margin-right: 50px;
+
+`
+
+export const SearchInput = styled.input`
+  height: 40px;
 
 `
 
@@ -103,8 +116,8 @@ export const AddressWrapper = styled.div`
 
 export const AddressInputBox = styled.input`
 margin-bottom : 20px;
-width: 588px;
-height: 52px;
+width: 465px;
+height: 40px;
   
 
 `

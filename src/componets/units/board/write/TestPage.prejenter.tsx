@@ -24,6 +24,7 @@ export default function TestPageUi (props) {
           <S.AddressSearchInput onComplete={props.onCompleteAddressSearch} />
         </S.AddressModal>
       )}
+      <S.Container>
     <S.Box>
       <S.Title>{props.isEdit ? "게시물 수정" : "게시물 등록"}</S.Title>
       <S.BigGroup>
@@ -105,6 +106,7 @@ export default function TestPageUi (props) {
       </S.MainSetting>
       <S.Btn type="submit" style={{backgroundColor : props?.formState?.isValid ? "yellow" : ""}}>{props.isEdit ? "수정하기" : "등록하기"}</S.Btn>
   </S.Box>
+  </S.Container>
   <input 
   ref={props.aaa} 
   style={{display:"none"}}

@@ -5,6 +5,7 @@ import { IBoardDetailUIProps } from "./BoardDetail.types";
 
 export default function BoardDetailUI(props: IBoardDetailUIProps) {
   return (
+    <S.Container>
     <S.Wrapper>
       <S.CardWrapper>
         <S.Header>
@@ -69,5 +70,6 @@ export default function BoardDetailUI(props: IBoardDetailUIProps) {
         <S.Button>삭제하기</S.Button>
       </S.BottomWrapper>
     </S.Wrapper>
+    </S.Container>
   );
 }

@@ -2,12 +2,28 @@ import styled from "@emotion/styled";
 import { LikeOutlined, DislikeOutlined } from "@ant-design/icons";
 import ReactPlayer from "react-player";
 
+export const Container = styled.div`
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+
+`
+
 export const Wrapper = styled.div`
-  width: 1200px;
+  width: 100%;
   margin: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
 `;
 
 export const CardWrapper = styled.div`
+background-color: red;
   border: 1px solid black;
   padding-top: 80px;
   padding-bottom: 100px;
