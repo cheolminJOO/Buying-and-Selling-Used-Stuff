@@ -16,6 +16,7 @@ export default function MyPageUI (props) {
         <S.NameInput 
         type='text'
         onChange={props.onChangeName}
+        defaultValue={props?.data?.fetchUserLoggedIn.name}
         />
         <S.InputTitle>
           이미지
@@ -27,7 +28,7 @@ export default function MyPageUI (props) {
             type="file" 
             onChange={props.onChangeImage}
             ref={props.fileRef}/>
-            <S.ImageSpace src = {props.image}/>
+            <S.ImageSpace src = {props.image || props?.data?.fetchUserLoggedIn.picture}/>
         </S.PictureWrapper>
       </S.BodyWrapper>
       <S.FooterWrapper>

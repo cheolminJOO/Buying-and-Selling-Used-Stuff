@@ -52,7 +52,7 @@ export default function LoginPage () {
     })
     setAccessToken(result?.data?.loginUser?.accessToken)
     Swal.fire({
-      icon: 'error',
+      icon: 'success',
       width: '400px',
       title: '성공적으로 로그인이 됐습니다.',
       confirmButtonText: '확인',

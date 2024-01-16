@@ -8,6 +8,13 @@ export const UPDATE_USER_INPUT = gql`
 
     }
   }
-
+`
+export const FETCH_USER_INFO = gql`
+  query fetchUserLoggedIn{
+    fetchUserLoggedIn{
+      picture,
+      name,
+    }
+  }
 
 `

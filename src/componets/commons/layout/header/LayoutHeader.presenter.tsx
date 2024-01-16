@@ -14,6 +14,7 @@ accessToken : any
 data : any
 isActive : boolean
 token : string
+profileImage : any
 
 }
 
@@ -31,9 +32,15 @@ export default function LayoutHeaderUI (props: ILayoutHeaderUIProps ) {
           <S.Settings>
             <S.ImgStyleWrapper>
             <S.LeftWrapper>
+              {props.data?.fetchUserLoggedIn.picture && (
             <S.ImgStyle 
             onClick={props.onClickImg}
-            src={props.data?.fetchUserLoggedIn.picture}/>
+            src={props.profileImage || props.data?.fetchUserLoggedIn.picture}/>
+            )}
+            {!props.data?.fetchUserLoggedIn.picture && (
+              <S.ImgStyle
+              src = 'https://hanghaelv4.s3.ap-northeast-2.amazonaws.com/avatar.png'/>
+            )}
             <S.Nickname>{props.data?.fetchUserLoggedIn.name}</S.Nickname>
             </S.LeftWrapper>
             

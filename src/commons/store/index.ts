@@ -39,4 +39,9 @@ export const visitedPageState = atom({
   default : ""
 })
 
+export const myImage = atom({
+  key : "profileImage",
+  default : ""
+})
+
 

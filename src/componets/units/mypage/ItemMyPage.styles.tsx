@@ -8,7 +8,13 @@ export const ImageSpace = styled.img`
 
 export const BigWrapper = styled.div`
   
-
+  width: 100vw;
+  height: 100vh;
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
 export const HeaderWrapper = styled.div`
