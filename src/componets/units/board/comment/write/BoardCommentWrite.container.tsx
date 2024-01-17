@@ -7,11 +7,11 @@ import { FETCH_BOARD_COMMENTS } from "../list/BoardCommentList.queries";
 import { PropertySafetyFilled } from "@ant-design/icons";
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup";
-import { schema } from "../../../../../commons/libraries/schemaValidation";
+import { commentSchema, schema } from "../../../../../commons/libraries/schemaValidation";
 
 export default function CommentPage (props) {
   const {register , handleSubmit, formState} = useForm({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(commentSchema),
     mode: "onChange",
   })
   const [password, setPassword] = useState("");

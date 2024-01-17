@@ -8,6 +8,7 @@ import { DELETE_BOARD, DELETE_BOARD_COMMENT, FETCH_BOARD_COMMENTS } from "./Boar
 import { useRouter } from "next/router";
 import { Modal } from "antd";
 
+
 export default function BoardCommentItem (props) {
   const router = useRouter()
   const [isOpenDeleteModal,setIsOpenDeleteModal] = useState(false)

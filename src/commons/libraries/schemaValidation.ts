@@ -1,3 +1,4 @@
+import { writers } from './../store/index';
 import * as yup from 'yup'
 
 
@@ -11,6 +12,13 @@ export const schema = yup.object({
   title : yup.string().required("제목을 쓰셔야 합니다."),
   contents : yup.string().required("내용을 입력하세요."),
   
+})
+
+
+export const commentSchema = yup.object({
+  writer : yup.string().required("작성자를 입력하세요"),
+  password : yup.string().required("비밀번호를 입력하세요요")
+
 })
 
 
