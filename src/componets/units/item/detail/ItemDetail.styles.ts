@@ -57,12 +57,17 @@ export const Line = styled.div`
   border-bottom: 1px solid gray;
 `
 
+export const PictureWrapper = styled.div`
+display: flex;
+`
+
 export const BodyHeader = styled.div`
 
 `
 
 export const BodyWrapper = styled.div`
-
+  display: flex;
+  flex-direction: column;
 `
 
 export const BodyHeaderText = styled.div`
@@ -74,7 +79,7 @@ export const ShortDesc = styled.div`
 `
 
 export const ProductName = styled.div`
-
+  margin-bottom: 20px;
 `
 
 export const Price = styled.div`
@@ -120,6 +125,6 @@ export const Tag = styled.div`
 
 export const ImgTag = styled.img`
 
-width: 100px;
-height: 100px;
+width: 200px;
+height: 200px;
 `

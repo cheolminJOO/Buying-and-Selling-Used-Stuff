@@ -6,6 +6,8 @@ import { IMutation, IMutationCreateUseditemQuestionArgs, IMutationUpdateUseditem
 import { ChangeEvent, useState } from "react";
 import { CREATE_USEDITEM_QUESTION, UPDATE_USEDITEM_QUESTION } from "./ItemComment.queries";
 import { FETCH_USEDITEM_QUESTION } from "../list/ItemConmmentList.queries";
+import Swal from "sweetalert2";
+import AlertUnit from "../../../../commons/Alert/AlertUnit";
 
 
 
@@ -33,6 +35,7 @@ export default function ItemCommentPage(props) {
       }]
     })
     console.log(result)
+    AlertUnit("댓글 등록이 완료 됐습니다.")
   }
   const onClickUpdateBtn = async() => {
      try {
@@ -52,8 +55,6 @@ export default function ItemCommentPage(props) {
           } catch (error) {
             if (error instanceof Error) alert(error.message)
           }
-      
-
   }
   return (
     <ItemCommentPageUI

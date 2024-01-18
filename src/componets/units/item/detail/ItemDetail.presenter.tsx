@@ -30,33 +30,34 @@ export default function ItemPageUI (props) {
             <S.ShortDesc>
             </S.ShortDesc>
             <S.ProductName>
-              {props.data?.fetchUseditem?.name}
+              상품명 :  {props.data?.fetchUseditem?.name}
     
             </S.ProductName>
-            <S.Price>
-            {props.data?.fetchUseditem?.price}
-            </S.Price>
+            <S.ProductName>
+            가격 : {props.data?.fetchUseditem?.price}
+            </S.ProductName>
+            <S.ProductName>
+            한줄설명 : {props.data?.fetchUseditem?.remarks}
+            </S.ProductName>
           </S.BodyHeaderText>
-          <S.HeartImg>
-
-          </S.HeartImg>
+          <S.ProductName>
+          내용 : {props.data?.fetchUseditem?.contents}
+        </S.ProductName>
+        <S.ProductName>
+          만날 장소 : {props.data?.fetchUseditem?.useditemAddress?.address}
+        </S.ProductName>
 
         </S.BodyHeader>
-       
-        <S.ModelImg>
-
-        </S.ModelImg>
-        <S.Contents>
-          {props.data?.fetchUseditem?.contents}
-        </S.Contents>
-        <S.Contents>
-          {props.data?.fetchUseditem?.useditemAddress?.address}
-        </S.Contents>
+        
         <S.Tag>
 
         </S.Tag>
       </S.BodyWrapper>
       <S.Line/>
+      <S.ProductName>
+        상품사진
+      </S.ProductName>
+      <S.PictureWrapper>
       {props.data?.fetchUseditem?.images
       ?.filter((el) => el)
       .map((el)=> (
@@ -65,6 +66,7 @@ export default function ItemPageUI (props) {
       src={`http://storage.googleapis.com/${el}`}
       />
       ))}
+      </S.PictureWrapper>
       <S.Map>
 
       </S.Map>

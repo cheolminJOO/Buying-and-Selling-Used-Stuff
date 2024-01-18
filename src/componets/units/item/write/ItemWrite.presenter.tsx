@@ -4,12 +4,13 @@ import * as S from './ItemWrite.styles'
 export default function ItemWriteUI (props) {
   return (
     <form onSubmit= {props.isEdit? props.handleSubmit(props.onClickUpdate) : props.handleSubmit(props.onUseHook) }>
+      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9e75b440966d71f4c024a68eb9a43103"></script>
 <Head>
         <script type="text/javascript" 
           src="//dapi.kakao.com/v2/maps/sdk.js?appkey=18260005708de9c19fe96a4dff026f6c&libraries=services">
         </script>
       </Head>
-       <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9e75b440966d71f4c024a68eb9a43103"></script>
+       
     <S.BigWrapper>
       <S.Wrapper>
         <S.Title>

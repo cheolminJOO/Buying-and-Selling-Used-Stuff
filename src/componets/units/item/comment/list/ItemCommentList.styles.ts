@@ -7,10 +7,11 @@ export const BigWrapper = styled.div`
 
 export const Wrapper = styled.div`
   margin-top: 20px;
+  margin-right: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 1250px;
+  width: 1200px;
   height: 100px;
 `
 
@@ -57,11 +58,11 @@ justify-content: space-between;
 `
 
 export const PencilImg = styled.img`
-
+cursor: pointer;
 `
 
 export const XImg = styled.img`
-
+cursor: pointer;
 `
 export const CommentBtn = styled.button`
 

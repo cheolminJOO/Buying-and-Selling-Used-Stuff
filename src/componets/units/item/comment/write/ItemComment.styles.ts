@@ -42,7 +42,7 @@ padding : 0;
 export const ContentsBottomWrapper = styled.div`
 
 width: 1200px;
-height: 60px;
+height: 47px;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -60,4 +60,5 @@ export const CreateBtn = styled.div`
   color: white;
   text-align: center;
   line-height: 60px;
+  cursor: pointer;
 `
