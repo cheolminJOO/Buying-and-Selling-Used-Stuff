@@ -5,3 +5,20 @@ export const FETCH_PICKED = gql`
     fetchUseditemsCountIPicked
   }
 `
+
+export const FETCH_USEDITEMS_PICKED = gql`
+  query fetchUseditemsIPicked($page:Int, $search:String){
+    fetchUseditemsIPicked(page:$page, search:$search){
+      _id
+      name
+      remarks
+      contents
+      price
+      images
+      seller{
+        name
+        picture
+      }
+    }
+  }
+`

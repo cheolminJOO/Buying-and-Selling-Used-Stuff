@@ -1,12 +1,13 @@
-import { useQuery } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import ItemPageUI from "./ItemDetail.presenter";
-import { FETCH_USED_ITEM } from "./ItemDetail.queries";
+import { DELETE_USED_ITEM, FETCH_USED_ITEM } from "./ItemDetail.queries";
 import { useRouter } from "next/router";
 import { IQuery, IQueryFetchUseditemArgs } from "../../../../types/generated/types";
 
 
 export default function ItemPage () {
   const router = useRouter();
+  const [deleteUsedItem] = useMutation(DELETE_USED_ITEM)
 
   const onClickMoveToEdit = () => {
     router.push(`/item/${router.query.boardId}/edit`)
@@ -26,11 +27,20 @@ export default function ItemPage () {
     router.push("/item")
   }
 
+  const onClickDeleteBtn = async() => {
+    await deleteUsedItem({
+      variables : {
+        useditemId : router.query.boardId
+      }
+    })
+  }
+
   return (
     <ItemPageUI
       data={data}
       onClickMoveToEdit={onClickMoveToEdit}
       onClickMoveToBoard={onClickMoveToBoard}
+      onClickDeleteBtn={onClickDeleteBtn}
       
 
   

@@ -81,6 +81,9 @@ export default function ItemPageUI (props) {
         onClick={props.onClickMoveToEdit}>
           수정하기
         </S.SecBtn>
+        <button onClick={props.onClickDeleteBtn}>
+          삭제하기
+        </button>
       </S.FooterWrapper>
     </S.BigWrapper>
   </S.BigBigWrapper>
