@@ -72,8 +72,8 @@ export default function BoardCommentItem (props) {
 
             </S.MainWrapper>
             <S.OptionWrapper>
-              <S.EditIcon id={props.el.id} onClick={onClickEditBtn} src="/mode-24px.png"></S.EditIcon>
-              <S.DeleteIcon2 onClick={onClickOpenDeleteModal} src="/clear-24px 2.png"></S.DeleteIcon2>
+              <S.EditIcon id={props.el.id} onClick={onClickEditBtn} src="/pencil.png"></S.EditIcon>
+              <S.DeleteIcon2 onClick={onClickOpenDeleteModal} src="/clear.png"></S.DeleteIcon2>
             </S.OptionWrapper>
           </S.FlexWrapper>
           <S.FooterWrapper>

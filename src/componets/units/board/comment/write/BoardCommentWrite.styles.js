@@ -59,6 +59,10 @@ export const ContentsLength = styled.div`
   color: gray;
 `;
 
+export const SubmitBtn = styled.button`
+width: 100px;
+`
+
 export const Button = styled.button`
   width: 91px;
   height: 51px;

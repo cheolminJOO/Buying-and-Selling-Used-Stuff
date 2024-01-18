@@ -1,4 +1,3 @@
-import { CreatedAt } from './../../board/write/board/detail/BoardDetail.styles';
 import { gql } from "@apollo/client";
 
 export const FETCH_USED_ITEM = gql`
@@ -11,7 +10,14 @@ export const FETCH_USED_ITEM = gql`
       price,
       createdAt,
       images,
-
+      seller{
+        name,
+        picture,
+      }
+      useditemAddress{
+        address,
+        addressDetail
+      }
     }
   }
 

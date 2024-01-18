@@ -31,6 +31,11 @@ export const Date = styled.div`
 
 `
 
+export const ProfileImg = styled.img`
+  width: 50px;
+  height: 50px;
+`
+
 export const PersonalInf = styled.div`
   display: flex;
   flex-direction: row;

@@ -13,7 +13,7 @@ export default function DetailedPage (props) {
   const {data} = useQuery(FETCH_BOARD, {
     variables : {boardId : router.query.boardId}
   })
-  console.log(data)
+  console.log("데이터",data)
 
 
   const onClickDelete = async() => {

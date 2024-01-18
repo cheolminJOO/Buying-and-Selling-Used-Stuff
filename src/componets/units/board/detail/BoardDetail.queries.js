@@ -12,6 +12,7 @@ export const FETCH_BOARD = gql`
       createdAt
       images
       boardAddress{zipcode, address, addressDetail}
+      user{picture,name}
     }
   }
 `

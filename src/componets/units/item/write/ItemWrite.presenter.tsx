@@ -90,7 +90,9 @@ export default function ItemWriteUI (props) {
                 <S.InputName>
                   주소
                 </S.InputName>
-                <S.AddressInputBox>
+                <S.AddressInputBox{
+                  ...props.register('address')
+                }>
                 </S.AddressInputBox>
               </S.AddressWrapper>
             </S.GpsWrapper>

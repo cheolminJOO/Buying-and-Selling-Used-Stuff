@@ -8,10 +8,10 @@ export default function ItemPageUI (props) {
     <S.BigWrapper>
       <S.HeaderWrapper>
         <S.PersonalInf>
-          <img src="/avatar.png"/>
+          <S.ProfileImg src={props.data?.fetchUseditem?.seller?.picture}/>
           <S.WriterAndDate>
             <S.Writer>
-              판매자
+              {props.data?.fetchUseditem?.seller?.name}
             </S.Writer>
             <S.Date>
               {getDate(props.data?.fetchUseditem?.createdAt)}
@@ -48,6 +48,9 @@ export default function ItemPageUI (props) {
         </S.ModelImg>
         <S.Contents>
           {props.data?.fetchUseditem?.contents}
+        </S.Contents>
+        <S.Contents>
+          {props.data?.fetchUseditem?.useditemAddress?.address}
         </S.Contents>
         <S.Tag>
 

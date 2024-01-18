@@ -53,9 +53,9 @@ export default function CommentPageUi(props) {
 
           <S.BottomWrapper>
             <S.ContentsLength>/100</S.ContentsLength>
-            <button>
+            <S.SubmitBtn>
               {props.isEdit ? "수정하기" : "등록하기"}
-            </button>
+            </S.SubmitBtn>
           </S.BottomWrapper>
           
 

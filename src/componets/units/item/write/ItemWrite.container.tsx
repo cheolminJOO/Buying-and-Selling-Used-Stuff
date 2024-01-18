@@ -56,7 +56,7 @@ export default function ItemWrite (props) {
     if(data.name) updateUseditemInput.name =  data.name
     if(data.summary) updateUseditemInput.remarks = data.summary
     if(data.desc) updateUseditemInput.contents = data.desc
-    if(Number(data.price)) updateUseditemInput.price = Number(data.price) 
+    if(Number(data.price)) updateUseditemInput.price = Number(data.price)
 
   try {
     const result = await updateUseditem({
@@ -87,6 +87,9 @@ console.log(data)
           tags : data.tag,
           price : Number(data.price),
           images : [...fileUrls],
+          useditemAddress :{
+            address : data.address
+          }
           
         }
       }
