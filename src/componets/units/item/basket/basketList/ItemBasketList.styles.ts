@@ -1,10 +1,17 @@
 import styled from "@emotion/styled";
 
 
+export const Category = styled.span`
+`
+
 export const Container = styled.div`
   display: flex;
   margin: 50px;
   cursor: pointer;
+    &:hover {
+    background-color: #5729ff;
+    color: white;
+  }
 
 `
 
@@ -17,9 +24,7 @@ export const Box = styled.div`
   justify-content: space-between;
 `
 
-export const Category = styled.span`
 
-`
 
 export const Line = styled.div`
   border-bottom: 1px solid black;

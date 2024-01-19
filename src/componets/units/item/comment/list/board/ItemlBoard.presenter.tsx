@@ -41,6 +41,7 @@ export default function ItemBoardListUI (props) {
         <S.Tit>상품명</S.Tit>
         <S.Tit>한줄설명</S.Tit>
         <S.Tit>날짜</S.Tit>
+        <S.Tit>기타</S.Tit>
       </S.Title>
       <div style={{height : "550px"}}>
     {props.data?.fetchUseditems.map((el, index) => (
@@ -72,7 +73,6 @@ export default function ItemBoardListUI (props) {
         onClick={props.onClickPick}>
           픽미
           </S.GotoBasket>
-        <S.GotoBasket onClick={onClickBasket(el)}>장바구니 담기</S.GotoBasket>
       </S.Row>
     </div>
     )

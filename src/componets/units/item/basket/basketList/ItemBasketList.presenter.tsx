@@ -23,10 +23,3 @@ export default function BasketListUI ({el}) {
 
   )
 }
-
-// {el?.name}
-// {el?.remarks}
-// {el?.contents}
-// {el?.images}
-// {el?.price}
-// {el?.seller?.name}
