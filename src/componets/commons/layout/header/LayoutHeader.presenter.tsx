@@ -25,7 +25,7 @@ export default function LayoutHeaderUI (props: ILayoutHeaderUIProps ) {
     <S.Wrapper>
       <S.InnerWrapper>
         <S.Logo onClick={props.onClickMoveToPage('/boards')}>
-        💎 EPL
+        💎 BUSU
         </S.Logo>
         <S.WrapperRight>
           {props.accessToken && (

@@ -50,6 +50,7 @@ export default function BoardCommentItem (props) {
   }
 
   return (
+    <S.Container>
     <div>
       {isOpenDeleteModal && (
         <Modal visible={true} onOk={onClickDelete} onCancel={onCancelDeletModal}>
@@ -92,5 +93,6 @@ export default function BoardCommentItem (props) {
         )}
     
     </div>
+    </S.Container>
   )
 }

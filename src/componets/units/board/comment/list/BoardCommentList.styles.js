@@ -12,6 +12,8 @@ export const ItemWrapper = styled.div`
   flex-direction: column;
 `;
 
+
+
 export const PasswordInput = styled.input`
 
 `
@@ -22,6 +24,16 @@ export const WriterAndStar = styled.div`
 
 export const RateStar = styled(Rate)`
   margin-left: 20px;
+`
+
+export const Container = styled.div`
+  width: 95vw;
+  margin-top: 50px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 `
 
 export const FlexWrapper = styled.div`

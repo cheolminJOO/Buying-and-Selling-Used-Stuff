@@ -2,13 +2,13 @@ import * as S from "./BoardCommentWrite.styles";
 
 export default function CommentPageUi(props) {
   return (
-    <>
+    <S.Container>
     <form onSubmit={props.handleSubmit(props.onClickSub)}>
       <S.Wrapper>
         <S.HearderWrapper>
         {!props.isEdit && (
           <>
-          <S.PencilIcon src="/rate_review-24px.png" />
+          <S.PencilIcon src="/rate.png" />
           <span>댓글</span>
           </>
         )}
@@ -63,6 +63,6 @@ export default function CommentPageUi(props) {
       </S.Wrapper>
     
     </form>
-    </>
+    </S.Container>
   );
 }

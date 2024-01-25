@@ -2,39 +2,42 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Wrapper, SliderItem } from "./LayoutBanner.styles";
+import * as S from './LayoutBanner.styles'
 
 export default function LayoutBannerUI() {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoPlaySpeed: 500,
   };
 
   const Images = [
-    {url : "/son5.jpg"},
-    {url : "/son2.jpg"},
-    {url : "/son3.jpg"},
-    {url : "/son4.jpg"},
-    {url : "/son5.jpg"},
-    {url : "/son1.jpg"},
+    {id : 1, url : "/motorcycle.png"},
+    {id : 2, url : "/clothes.png"},
+    {id : 3, url : "/kettle.png"},
+    {id : 4, url : "/laptop.png"},
+    {id : 5, url : "/shoes.png"},
+    {id : 6, url : "/cap.png"},
   ]
   return (
-    <Wrapper>
+    <S.Wrapper>
     <Slider
           {...settings}
     >
       {Images.map((el) => (
       
-        <div>
-          <SliderItem src={el.url}/>
+        <div key={el.id}>
+          <S.SliderItem src={el.url} alt="엑박"/>
         </div>
 
       
       ))}
     </Slider>
-  </Wrapper>
+  </S.Wrapper>
 );
 }
 

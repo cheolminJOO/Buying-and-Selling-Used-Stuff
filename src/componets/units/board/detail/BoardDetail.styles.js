@@ -81,6 +81,11 @@ export const Head = styled.div`
   font-weight : Bold;
 `
 
+export const ContentsDiv = styled.div`
+  display: flex;
+
+`
+
 export const BigGrayBox = styled.div`
   width : 996px;
   height : 480px;
@@ -91,7 +96,6 @@ export const Word = styled.div`
   font-size : 16px;
   font-weight : 400;
   line-height : 23.68px;
-  width:996px;
   height : 96px;
 `
 export const BtnBox = styled.div`
@@ -121,6 +125,9 @@ export const WrapperPhotoBox = styled.div`
 export const UltraBigBox = styled.div`
 width : 1200px;
 box-sizing : border-box;
+display: flex;
+justify-content: center;
+flex-direction: column;
 `
 export const RoutedBox = styled.div`
 width : 1200px;
@@ -314,6 +321,15 @@ export const CommentTit = styled.div`
   font-size : 18px;
   color : black;
   margin : 30px 0;
+
+`
+
+export const Container = styled.div`
+  width: 95vw;
+  height : 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 `
 

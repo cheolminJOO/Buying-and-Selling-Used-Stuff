@@ -69,7 +69,7 @@ export default function TestPageUi (props) {
           props.data?.fetchBoard.boardAddress?.zipcode ||
           ""}
         />
-        <S.MidBox onClick={props.onClickAddressSearch}>우편번호 검색</S.MidBox>
+        <S.MidBox type="button" onClick={props.onClickAddressSearch}>우편번호 검색</S.MidBox>
         <S.TitleInput 
         value={             
           props.address ||

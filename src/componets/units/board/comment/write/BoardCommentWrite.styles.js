@@ -5,6 +5,16 @@ export const Wrapper = styled.div`
   margin: 0px 30px;
 `;
 
+export const Container = styled.div`
+  width: 95vw;
+  margin-top: 50px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+`
+
 export const HearderWrapper = styled.div`
   display: flex;
 `;

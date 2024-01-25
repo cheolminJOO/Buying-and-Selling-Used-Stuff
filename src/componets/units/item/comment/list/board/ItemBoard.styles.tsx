@@ -80,6 +80,9 @@ export const DetailedBtn = styled.button`
 
 export const GotoBasket = styled.button`
     width: 130px;
+    &:hover {
+        background-color: orange;
+    }
 
 `
 

@@ -4,6 +4,7 @@ export const BigWrapper = styled.div`
   display: flex;
   width: 1800px;
   justify-content: center;
+  margin-left: 70px;
 
 `
 

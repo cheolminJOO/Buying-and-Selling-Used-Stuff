@@ -55,7 +55,7 @@ export default function BoardListV (props) {
         </S.ColumnTitle>
         <S.ColumnWriter>{el.writer}</S.ColumnWriter>
         <S.ColumnCreatedAt>{getDate(el.createdAt)}</S.ColumnCreatedAt>
-        <button onClick={onClickBasket(el)}>장바구니 담기</button>
+        <S.BlankDiv onClick={onClickBasket(el)}></S.BlankDiv>
       </S.Row>
     </div>
     )

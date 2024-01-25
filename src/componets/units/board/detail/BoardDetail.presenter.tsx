@@ -1,13 +1,13 @@
 
 import { getDate } from '/src/commons/utills/utill'
 import * as S from './BoardDetail.styles'
-import { Tooltip } from 'antd'
 import DOMPurify from 'dompurify'
+import Tooltip from '../../../commons/hooks/tooltip/tooltip'
 export default function BoardDetailUi (props) {
 
   return(
   
-
+        <S.Container>
           <S.UltraBigBox>
             <S.RoutedBox>
               <div>
@@ -21,8 +21,10 @@ export default function BoardDetailUi (props) {
                   </S.WriterWrapper>
                   <S.ImageWrapper>
                     <S.FirstImage src='/clip.png'/>
+                    
                     <S.SecondImage 
                     src='/address.png' />
+                    
                   </S.ImageWrapper>
                 </S.HeaderWrapper>
                 <S.Line></S.Line>
@@ -30,24 +32,29 @@ export default function BoardDetailUi (props) {
               <S.BodyBox>
                 <S.AddressInput
                 type='text'
-                value={props.data?.fetchBoard.boardAddress.address}
+                value={props.data?.fetchBoard?.boardAddress?.address}
                 />
                 <S.AddressDetailInput
                 type='text'
-                value={props.data?.fetchBoard.boardAddress.addressDetail}
+                value={props.data?.fetchBoard?.boardAddress.addressDetail}
                 />
-
+                
                 <S.Head
                 style = {{color : "green"}}>
-                  {props.data?.fetchBoard.title}
+                  제목 : {props.data?.fetchBoard.title}
                 </S.Head>
+
+                
                 {typeof window !== "undefined" && (
-                <S.Word
+                <S.ContentsDiv>
+                  <S.Word>내용 : </S.Word>
+                  <S.Word
                 style = {{color : "red"}}
                 dangerouslySetInnerHTML ={{
                  __html : DOMPurify.sanitize(props.data?.fetchBoard?.contents)
                 }}
                 />
+                </S.ContentsDiv>
                 )}
                 <S.WrapperPhotoBox>
                 {props.data?.fetchBoard.images?.filter((el) => el !== "")
@@ -66,6 +73,7 @@ export default function BoardDetailUi (props) {
             <S.DetailedPageBtn onClick={props.onClickMoveToPage('/boards')}>삭제하기</S.DetailedPageBtn>
           </S.BtnBox>
           </S.UltraBigBox>
+          </S.Container>
       )
 
 }

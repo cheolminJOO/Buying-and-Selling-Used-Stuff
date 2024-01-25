@@ -111,15 +111,6 @@ export default function ItemWriteUI (props) {
               ))}
             </S.PhotoBoxWrapper>
           </S.PhotoWrapper>
-          <S.MainSetting>
-            <S.InputName>
-              메인 사진 설정
-            </S.InputName>
-            <S.FirstRadioBtn>
-            </S.FirstRadioBtn>
-            <S.SecondRadioBtn>
-            </S.SecondRadioBtn>
-          </S.MainSetting>
         </S.WrapperContents>
         <S.SubMitBtn
         type='submit'>

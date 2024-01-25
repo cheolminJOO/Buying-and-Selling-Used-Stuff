@@ -14,6 +14,11 @@ export const Wrapper = styled.div`
     
 `
 
+export const BlankDiv = styled.div`
+
+    width: 50px;
+`
+
 export const HeaderWrapper = styled.div`
 
     display: flex;
