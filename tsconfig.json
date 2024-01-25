@@ -17,13 +17,14 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "types": ["@emotion/react/types/css-prop"] 
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/test/index.tsx", "src/componets/commons/layout/banner/LayoutBanner.container.js", "src/componets/commons/layout/navigation/LayoutNavigation.container.js", "src/componets/units/board/openapi/list/OpenapiList.presenter.js", "src/componets/units/board/comment/list/BoardCommentList.presenter.tsx", "src/componets/units/item/detail/ItemDetail.queries.ts", "pages/item/[boardId]/edit/index.js", "src/componets/units/board/comment/list2/BoardCommentList.container.js", "src/componets/units/item/comment/write/write/BoardCommentWrite.presenter.js", "src/componets/units/item/comment/write/write/BoardCommentWrite.container.js", "src/componets/units/board/list/BoardList.presenter.js", "src/componets/units/board/list/BoardList.container.js", "pages/mypage/index.js", "src/componets/units/board/openapi/list/OpenapiList.container.js", "src/componets/units/item/comment/list/ItemCommentList.presenterItem.tsx", "pages/boards/index.js"  ],
+, "pages/test/index.tsx", "src/componets/commons/layout/banner/LayoutBanner.container.js", "src/componets/commons/layout/navigation/LayoutNavigation.container.js", "src/componets/units/board/openapi/list/OpenapiList.presenter.js", "src/componets/units/board/comment/list/BoardCommentList.presenter.tsx", "src/componets/units/item/detail/ItemDetail.queries.ts", "pages/item/[boardId]/edit/index.js", "src/componets/units/board/comment/list2/BoardCommentList.container.js", "src/componets/units/item/comment/write/write/BoardCommentWrite.presenter.js", "src/componets/units/item/comment/write/write/BoardCommentWrite.container.js", "src/componets/units/board/list/BoardList.presenter.js", "src/componets/units/board/list/BoardList.container.js", "pages/mypage/index.js", "src/componets/units/board/openapi/list/OpenapiList.container.js", "src/componets/units/item/comment/list/ItemCommentList.presenterItem.tsx", "pages/boards/index.js", "src/componets/units/item/write/ItemWrite.presenter.tsx"  ],
   "exclude": [
     "node_modules"
   ]
