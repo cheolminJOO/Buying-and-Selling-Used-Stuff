@@ -1,7 +1,7 @@
 import { useMutation, useQuery } from "@apollo/client";
 import CommentAnswerPageUI from "./ItemCommentQandA.presenter";
 import { CREATE_QNA, FETCH_QNA } from "./ItemCommentQandA.queries";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 export default function CommentAnswerPage (props) {
   const[contents,setContents]= useState("")
@@ -17,9 +17,8 @@ export default function CommentAnswerPage (props) {
     setIsUp(true)
   }
   
-  console.log(data)
 
-  const onChangeComment = async(event) => {
+  const onChangeComment = async(event : ChangeEvent<HTMLInputElement>) => {
     setContents(event.target.value)
   }
 

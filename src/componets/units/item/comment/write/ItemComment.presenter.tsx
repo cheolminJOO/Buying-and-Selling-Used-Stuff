@@ -1,6 +1,7 @@
 import * as S from "./ItemComment.styles"
+import { IItemCommentPageUi } from "./ItemComment.types"
 
-export default function ItemCommentPageUI(props) {
+export default function ItemCommentPageUI(props : IItemCommentPageUi) {
   return (
     <S.BigWrapper>
       <S.Wrapper>

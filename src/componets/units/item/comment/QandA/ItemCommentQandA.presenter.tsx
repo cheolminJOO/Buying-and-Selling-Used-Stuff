@@ -1,4 +1,6 @@
-export default function CommentAnswerPageUI (props) {
+import { CommentAnswerPageUI } from "./ItemCommentQandA.types";
+
+export default function CommentAnswerPageUI (props : CommentAnswerPageUI) {
   return(
     <div>
     {!props.data?.fetchUseditemQuestionAnswers[0]?.contents && (

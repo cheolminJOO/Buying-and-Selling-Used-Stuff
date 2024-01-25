@@ -8,10 +8,11 @@ import { CREATE_USEDITEM_QUESTION, UPDATE_USEDITEM_QUESTION } from "./ItemCommen
 import { FETCH_USEDITEM_QUESTION } from "../list/ItemConmmentList.queries";
 import Swal from "sweetalert2";
 import AlertUnit from "../../../../commons/Alert/AlertUnit";
+import { IItemCommentProps } from "./ItemComment.types";
 
 
 
-export default function ItemCommentPage(props) {
+export default function ItemCommentPage(props : IItemCommentProps) {
   const router = useRouter()
   const [contents, setContents] = useState("")
   const[updateUseditemQuestion] = useMutation<Pick<IMutation,"updateUseditemQuestion">,IMutationUpdateUseditemQuestionArgs>(UPDATE_USEDITEM_QUESTION)

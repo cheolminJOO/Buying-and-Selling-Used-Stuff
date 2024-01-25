@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import PhotoUpload from '../photo/ItemPhoto.container'
 import * as S from './ItemWrite.styles'
-export default function ItemWriteUI (props) {
+import { IItemWritePresenter } from './ItemWrite.types'
+export default function ItemWriteUI (props : IItemWritePresenter) {
   return (
     <form onSubmit= {props.isEdit? props.handleSubmit(props.onClickUpdate) : props.handleSubmit(props.onUseHook) }>
       <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9e75b440966d71f4c024a68eb9a43103"></script>

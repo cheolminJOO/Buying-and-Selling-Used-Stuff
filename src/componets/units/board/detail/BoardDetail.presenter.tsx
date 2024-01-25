@@ -34,10 +34,12 @@ export default function BoardDetailUi (props) {
                 type='text'
                 value={props.data?.fetchBoard?.boardAddress?.address}
                 />
+                {props.data?.fetchBoard?.boardAddress.addressDetail && (
                 <S.AddressDetailInput
                 type='text'
                 value={props.data?.fetchBoard?.boardAddress.addressDetail}
                 />
+                )}
                 
                 <S.Head
                 style = {{color : "green"}}>

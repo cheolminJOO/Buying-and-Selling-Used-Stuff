@@ -3,9 +3,10 @@
 import { getDate } from "../../../../../../commons/utills/utill";
 import Pagination01 from "../../../../../commons/pagination/01/Pagination01.container";
 import * as S from "./ItemBoard.styles"
+import { IItemBoardListUI } from "./ItemBoard.types";
 
 
-export default function ItemBoardListUI (props) {
+export default function ItemBoardListUI (props : IItemBoardListUI) {
   const onClickBasket = (basket) => () => {
     const baskets= JSON.parse(
       localStorage.getItem("baskets")??"[]"
@@ -63,8 +64,7 @@ export default function ItemBoardListUI (props) {
         >{getDate(el.createdAt)}</S.ColumnCreatedAt>
         <S.DetailedBtnWidController>
         <S.DetailedBtn       
-        id={el._id}
-        onClick = {props.onClickDetailedPage}>
+        onClick = {props.onClickDetailedPage(el._id)}>
           상세페이지
         </S.DetailedBtn>
         </S.DetailedBtnWidController>

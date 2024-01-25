@@ -3,8 +3,9 @@ import * as S from "./ItemPhoto.styles"
 import { Modal } from "antd";
 import { UPLOAD_FILE } from "./ItemPhoto.queries";
 import { useMutation } from "@apollo/client";
+import { IPhotoUploadProps } from "./ItemPhoto.types";
 
-export default function PhotoUploadUI (props) {
+export default function PhotoUploadUI (props : IPhotoUploadProps) {
   const fileRef = useRef(null)
   const[uploadFile] = useMutation(UPLOAD_FILE)
 

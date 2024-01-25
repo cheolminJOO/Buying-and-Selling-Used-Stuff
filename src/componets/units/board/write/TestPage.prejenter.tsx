@@ -56,7 +56,7 @@ export default function TestPageUi (props) {
       </S.TitleBox>
       <S.ContentsBox>
           <S.Writer>내용</S.Writer>
-          <ReactQuill onChange={onChangeContents}/>
+          <ReactQuill style={{height : "500px", fontSize : "20px"}} onChange={onChangeContents}/>
           <S.Error>{props.formState.errors.contents?.message}</S.Error>
       </S.ContentsBox>
       <S.AddressBox>

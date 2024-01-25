@@ -7,6 +7,7 @@ import { IMutation, IMutationCreateUseditemArgs, IUpdateUseditemInput } from "..
 import { useForm } from "react-hook-form";
 import * as yup from 'yup'
 import { yupResolver } from "@hookform/resolvers/yup";
+import { IItemData, IItemUpdateProps, ItemWriteProps } from "./ItemWrite.types";
 
 
 declare const window : typeof globalThis & {
@@ -15,15 +16,15 @@ declare const window : typeof globalThis & {
 
 
 export const aaa = yup.object({
-  name: yup.string().required("상품명 입력 안 하고 뭐하냐고 !!!"),
-  summary: yup.string().required("한줄요약 하라고 !!!!!"),
+  name: yup.string().required("상품명을 입력하세요"),
+  summary: yup.string().required("한줄요약 입력하세요"),
   desc:yup.string(),
-  price: yup.string().required("뭐 기부할거야 ? 가격 써야지 ??"),
-  tag: yup.string().required("홍보는 안 할거야 ??!!!!!!!!!!")
+  price: yup.string().required("가격을 입력하세요"),
+  tag: yup.string().required("태그를 입력하세요.")
 })
 
 
-export default function ItemWrite (props) {
+export default function ItemWrite (props : ItemWriteProps) {
   const {register, handleSubmit, formState } = useForm({
     mode: "onChange",
     resolver:yupResolver(aaa)
@@ -35,7 +36,7 @@ export default function ItemWrite (props) {
   const [createUsedItem] = useMutation<Pick<IMutation,"createUseditem">,IMutationCreateUseditemArgs>(CREATE_USED_ITEM)
   const [fileUrls, setFileUrls] = useState(["",""])
 
-  const onChangeFileUrls = (fileUrl, index) => {
+  const onChangeFileUrls = (fileUrl : string, index : number) => {
     const newFileUrls = [...fileUrls]
     newFileUrls[index] = fileUrl
     setFileUrls(newFileUrls)
@@ -45,12 +46,10 @@ export default function ItemWrite (props) {
     setKeyWord(event.target.value)
   }
 
-  const onClickUpdate = async(data) => {
+  const onClickUpdate = async(data : IItemUpdateProps) => {
     if(!data.name && !data.summary && !data.price) {
       alert("바뀐 내용이 없습니다. 다시 시도해주세요")
     }
-
-    console.log(data)
 
     const updateUseditemInput : IUpdateUseditemInput = {}
     if(data.name) updateUseditemInput.name =  data.name
@@ -70,10 +69,9 @@ export default function ItemWrite (props) {
   }catch(error) {
     if (error instanceof Error) alert(error.message)
   }
-console.log(data)
 }
 
-  const onUseHook = async(data : any) => {
+  const onUseHook = async(data : IItemData) => {
     if(!data.name){
       return
     }

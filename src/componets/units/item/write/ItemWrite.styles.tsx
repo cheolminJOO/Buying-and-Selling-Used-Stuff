@@ -165,7 +165,7 @@ export const SubMitBtn = styled.button`
 `
 
 export const FormState = styled.div`
-  
+  font-size: 15px;
   color: red;
 `
 

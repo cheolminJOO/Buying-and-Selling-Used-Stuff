@@ -1,7 +1,8 @@
 import { getDate } from '../../../../commons/utills/utill'
 import * as S from './ItemDetail.styles'
+import { ItemPageProps } from './ItemDetail.types'
 
-export default function ItemPageUI (props) {
+export default function ItemPageUI (props : ItemPageProps) {
 
   return (
   <S.BigBigWrapper>

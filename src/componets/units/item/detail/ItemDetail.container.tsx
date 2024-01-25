@@ -41,9 +41,6 @@ export default function ItemPage () {
       onClickMoveToEdit={onClickMoveToEdit}
       onClickMoveToBoard={onClickMoveToBoard}
       onClickDeleteBtn={onClickDeleteBtn}
-      
-
-  
     />
   )
 }

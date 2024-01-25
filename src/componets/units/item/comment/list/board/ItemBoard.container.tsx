@@ -1,5 +1,5 @@
 import { useMutation, useQuery } from "@apollo/client"
-import { useState } from "react";
+import { ChangeEvent, MouseEvent, useState } from "react";
 import _ from 'lodash'
 import { useRouter } from "next/router";
 import ItemBoardListUI from "./ItemlBoard.presenter";
@@ -28,13 +28,13 @@ export default function ItemBoard () {
     setKeyWord(value)
   }, 500)
 
-  const onChangeSearchInput = (event) => {
+  const onChangeSearchInput = (event : ChangeEvent<HTMLInputElement>) => {
     getDebounce( event.currentTarget.value)
     
   }
 
-  const onClickDetailedPage = async(event) => {
-  await router.push(`/item/${event.target.id}`)
+  const onClickDetailedPage = async(id :string ) =>  {
+  await router.push(`/item/${id}`)
   }
 
   
