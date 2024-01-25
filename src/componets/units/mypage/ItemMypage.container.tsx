@@ -49,7 +49,7 @@ export default function MyPage () {
         }
       })
       onChangeFileUrl(result.data.uploadFile.url)
-      console.log(onChangeFileUrl)
+      console.log(result.data.uploadFile.url)
 
       
 
@@ -64,13 +64,15 @@ export default function MyPage () {
   }
 
   const onClickUpdateBtn = async () => {
+
+    const myVariable : IMyProfile = {}
     try {
       // updateUser 뮤테이션 실행
       const result = await updateUser({
         variables: {
           updateUserInput: {
             name: name,
-            picture: image,
+            picture: fileUrl,
           },
         },
       });
