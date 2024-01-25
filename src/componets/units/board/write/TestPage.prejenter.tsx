@@ -1,10 +1,11 @@
 import * as S from "./TestPage.styles"
 import Uploads01 from '../../../commons/uploads/01/Uploads01.container'
 import dynamic from "next/dynamic"
+import { ITestPageUI } from "./TestPage.type"
 
 const ReactQuill = dynamic(async() => await import("react-quill"), { ssr: false})
 
-export default function TestPageUi (props) {
+export default function TestPageUi (props : ITestPageUI) {
 
 
     const onChangeContents = (value) : void => {

@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "../../../../commons/libraries/schemaValidation";
 import "react-quill/dist/quill.snow.css"
-import { IMyVariable } from "./TestPage.type";
+import { IMyVariable, ITestPageWrite } from "./TestPage.type";
 
 
 interface IFormData {
@@ -18,7 +18,7 @@ interface IFormData {
 }
 
 
-export default function TestPage (props) {
+export default function TestPage (props : ITestPageWrite) {
   const {register , handleSubmit, formState,setValue,trigger} = useForm<IFormData>({
     resolver: yupResolver(schema),
     mode: "onChange",
@@ -33,7 +33,7 @@ export default function TestPage (props) {
   const [address,setAddress] = useState("")
   const [zipcode,setZipcode] = useState("")
   const [addressDetail, setAddressDetail] = useState("")
-  const onChangeFileUrls = (fileUrl, index) => {
+  const onChangeFileUrls = (fileUrl : string, index : number) => {
     const newFileUrls = [...fileUrls]
     newFileUrls[index] = fileUrl
     setFileUrls(newFileUrls)

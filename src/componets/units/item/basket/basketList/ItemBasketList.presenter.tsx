@@ -1,7 +1,8 @@
 import { useRouter } from "next/router"
 import * as S from "./ItemBasketList.styles"
+import { IBasketEl } from "./ItemBasketList.types"
 
-export default function BasketListUI ({el}) {
+const BasketListUI : React.FC<IBasketEl> = ({el}) => {
   const router = useRouter()
   const onClickContainer = (id) => () => {
     router.push(`item/${id}`)
@@ -23,3 +24,4 @@ export default function BasketListUI ({el}) {
 
   )
 }
+export default BasketListUI

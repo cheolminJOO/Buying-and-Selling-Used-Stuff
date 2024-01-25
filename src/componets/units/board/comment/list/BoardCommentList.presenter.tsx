@@ -5,9 +5,10 @@ import InfiniteScroll from 'react-infinite-scroller';
 import { IQuery, IQueryFetchBoardCommentsArgs } from '../../../../../types/generated/types';
 import { FETCH_BOARD_COMMENTS } from './BoardCommentList.queries';
 import { useRouter } from 'next/router';
+import { IBoardCommentLishUI } from './BoardCOmmentList.types';
 
 
-export default function BoardCommentListUI(props) {
+export default function BoardCommentListUI(props : IBoardCommentLishUI) {
   const router = useRouter()
   const {data, fetchMore} = useQuery<Pick<IQuery,"fetchBoardComments">, IQueryFetchBoardCommentsArgs >(FETCH_BOARD_COMMENTS, {
     variables: {boardId : router.query.boardId}

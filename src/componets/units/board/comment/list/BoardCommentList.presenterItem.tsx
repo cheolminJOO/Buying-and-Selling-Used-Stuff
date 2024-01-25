@@ -1,10 +1,9 @@
-import CommentPageUi from "../write/BoardCommentWrite.presenter";
 import * as S from "./BoardCommentList.styles"
 import {getDate} from "../../../../../commons/utills/utill"
 import CommentPage from "../write/BoardCommentWrite.container";
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
-import { DELETE_BOARD, DELETE_BOARD_COMMENT, FETCH_BOARD_COMMENTS } from "./BoardCommentList.queries";
+import {  DELETE_BOARD_COMMENT, FETCH_BOARD_COMMENTS } from "./BoardCommentList.queries";
 import { useRouter } from "next/router";
 import { Modal } from "antd";
 

@@ -1,6 +1,7 @@
 import * as S from "./BoardCommentWrite.styles";
+import { ICommentPageUI } from "./BoardCommentWrite.types";
 
-export default function CommentPageUi(props) {
+export default function CommentPageUi(props : ICommentPageUI) {
   return (
     <S.Container>
     <form onSubmit={props.handleSubmit(props.onClickSub)}>

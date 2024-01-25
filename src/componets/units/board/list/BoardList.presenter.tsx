@@ -1,9 +1,10 @@
 
 import Pagination01 from "../../../commons/pagination/01/Pagination01.container";
 import * as S from "./BoardList.styles"
+import { IBoardListUIProps } from "./BoardList.types";
 import { getDate } from "/src/commons/utills/utill"
 
-export default function BoardListV (props) {
+export default function BoardListV (props : IBoardListUIProps) {
   const onClickBasket = (basket) => () => {
     const baskets= JSON.parse(
       localStorage.getItem("baskets")??"[]"

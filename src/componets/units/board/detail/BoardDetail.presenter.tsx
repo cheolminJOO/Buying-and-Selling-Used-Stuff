@@ -3,7 +3,7 @@ import { getDate } from '/src/commons/utills/utill'
 import * as S from './BoardDetail.styles'
 import DOMPurify from 'dompurify'
 import Tooltip from '../../../commons/hooks/tooltip/tooltip'
-export default function BoardDetailUi (props) {
+export default function BoardDetailUi (props : IBoardDetailUIProps) {
 
   return(
   
@@ -34,10 +34,10 @@ export default function BoardDetailUi (props) {
                 type='text'
                 value={props.data?.fetchBoard?.boardAddress?.address}
                 />
-                {props.data?.fetchBoard?.boardAddress.addressDetail && (
+                {props.data?.fetchBoard?.boardAddress?.addressDetail && (
                 <S.AddressDetailInput
                 type='text'
-                value={props.data?.fetchBoard?.boardAddress.addressDetail}
+                value={props.data?.fetchBoard?.boardAddress?.addressDetail}
                 />
                 )}
                 

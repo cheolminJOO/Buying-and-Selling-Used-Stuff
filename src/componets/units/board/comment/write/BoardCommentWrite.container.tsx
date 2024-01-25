@@ -8,6 +8,7 @@ import { PropertySafetyFilled } from "@ant-design/icons";
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup";
 import { commentSchema, schema } from "../../../../../commons/libraries/schemaValidation";
+import { ICommentData } from "./BoardCommentWrite.types";
 
 export default function CommentPage (props) {
   const {register , handleSubmit, formState} = useForm({
@@ -21,7 +22,7 @@ export default function CommentPage (props) {
   const [createBoardComment] = useMutation(CREATE_BOARD_COMMENT)
   const router = useRouter();
 
-  const onChangeStar = (value) => {
+  const onChangeStar = (value : any) => {
     setStar(value)
     console.log(setStar)
   }
@@ -52,7 +53,7 @@ export default function CommentPage (props) {
 
   }
 
-  const onClickSub = async(data : any) => {
+  const onClickSub = async(data : ICommentData) => {
       const result = await createBoardComment ({
         variables : {
           createBoardCommentInput: {

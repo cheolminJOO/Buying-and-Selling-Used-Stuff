@@ -1,9 +1,7 @@
 import { ApolloQueryResult, OperationVariables } from "@apollo/client";
 import { MouseEvent } from "react";
-import {
-  IQuery,
-  IQueryFetchBoardsArgs,
-} from "../../../../commons/types/generated/types";
+import { IQuery, IQueryFetchBoardsArgs } from "../../../../types/generated/types";
+
 
 export interface IBoardListUIProps {
   data?: Pick<IQuery, "fetchBoards">;

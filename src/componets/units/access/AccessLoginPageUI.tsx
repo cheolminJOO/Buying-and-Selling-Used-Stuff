@@ -1,7 +1,8 @@
 import React from "react";
 import * as S from './AccessLoginPage.styles'
+import { ILoginPageUI } from "./AccessLoginPage.types";
 
-export default function LoginPageUI(props) {
+export default function LoginPageUI(props : ILoginPageUI) {
   return (
     <S.Container>
       <S.Box>

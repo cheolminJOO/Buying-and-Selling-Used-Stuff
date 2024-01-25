@@ -1,6 +1,7 @@
 import * as S from './AccessCreateUser.styles'
+import { ICreateUserPageUI } from './AccessCreateUser.types'
 
-export default function CreateUserPageUI (props) {
+export default function CreateUserPageUI (props : ICreateUserPageUI) {
   return(
     <>
       이메일 입력 : <input onChange={props.onChangeEmail} type=" text"/>

@@ -1,7 +1,7 @@
 import { useMutation } from "@apollo/client";
 import CreateUserPageUI from "./AccessCreateUser.presenter";
 import { CREATE_USER } from "./AccessCreateUser.queries";
-import {useState} from "react"
+import {ChangeEvent, useState} from "react"
 import { Alert, Modal } from "antd";
 import { useRouter } from "next/router";
 
@@ -12,15 +12,15 @@ export default function CreateUserPage () {
   const [name, setName] = useState("")
   const [password, setPassword] = useState("")
 
-  const onChangeEmail = (event) => {
+  const onChangeEmail = (event : ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value)
   }
 
-  const onChangeName = (event) => {
+  const onChangeName = (event : ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value)
   }
 
-  const onChangePassword = (event) => {
+  const onChangePassword = (event : ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value)
   }
 
