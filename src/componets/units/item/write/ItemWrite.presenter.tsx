@@ -41,19 +41,6 @@ export default function ItemWriteUI (props : IItemWritePresenter) {
         </S.InputWrapper>
         <S.InputWrapper>
           <S.InputName>
-            상품설명
-          </S.InputName>
-          <S.TextArea 
-          {...props.register('desc')}
-          defaultValue={props.data?.fetchUseditem?.contents}
-          placeholder='상품을 설명해주세요.'>
-          {/* <S.FormState>{props.isEdit ? "":props.formState.errors.desc?.message}</S.FormState> */}
-            
-          </S.TextArea>
-
-        </S.InputWrapper>
-        <S.InputWrapper>
-          <S.InputName>
             판매가격
           </S.InputName>
           <S.InputBox 

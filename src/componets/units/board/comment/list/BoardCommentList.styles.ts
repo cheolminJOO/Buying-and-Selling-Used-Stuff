@@ -12,6 +12,28 @@ export const ItemWrapper = styled.div`
   flex-direction: column;
 `;
 
+export const EditModalDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+`
+
+export const EditModalContentsDiv = styled.div`
+  margin-top: 20px;
+
+`
+
+export const ModalDiv = styled.div`
+width: 500px;
+height: 500px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+`
+
 
 
 export const PasswordInput = styled.input`
@@ -20,6 +42,9 @@ export const PasswordInput = styled.input`
 
 export const WriterAndStar = styled.div`
 
+`
+
+export const Star = styled(Rate)`
 `
 
 export const RateStar = styled(Rate)`
@@ -116,4 +141,5 @@ export const EditIcon = styled.img`
 export const DeleteIcon2 = styled.img`
   width: 24px;
   height: 24px;
+  cursor: pointer;
 `

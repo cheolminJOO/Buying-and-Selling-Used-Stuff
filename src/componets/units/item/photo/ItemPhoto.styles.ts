@@ -19,6 +19,5 @@ export const ImageUpload = styled.img`
   width: 100px;
   height: 100px;
   margin: 0 10px;
-  border: 5px solid black;
 `
 

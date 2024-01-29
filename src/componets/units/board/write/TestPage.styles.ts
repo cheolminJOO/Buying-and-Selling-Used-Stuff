@@ -149,6 +149,7 @@ export const Btn = styled.button`
   font-size : 16px;
   font-weight : 500;
   cursor : pointer;
+  margin-top: 50px;
 `
 
 export const AddressBox = styled.div`

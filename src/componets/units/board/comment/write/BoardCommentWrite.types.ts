@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react';
+import { ChangeEvent, MouseEvent } from 'react';
 export interface ICommentData {
   
   writer : string;
@@ -10,6 +10,7 @@ export interface ICommentData {
 
 export interface ICommentPageUI {
   onChangeStar : () => void;
+  onChangeComment : (event : ChangeEvent<HTMLInputElement>) => void;
   isEdit : boolean ;
   el : any;
   setIsEdit : any;
@@ -18,5 +19,7 @@ export interface ICommentPageUI {
   register : any;
   handleSubmit : any;
   formState : any;
+  contents : string;
+
 
 }

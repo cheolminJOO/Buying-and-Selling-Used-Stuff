@@ -3,7 +3,7 @@ import * as S from './LayoutNavigation.styles'
 
   const NAVIGATION_MENUS = [
     { name : "내 펫을 소개해", page : "/openapis"},
-    { name : "잡단 게시판", page : "/boards"},
+    { name : "잡담 게시판", page : "/boards"},
     { name : "중고마켓 게시판", page : "/item"},
     { name : "마이페이지", page : "/mypage"},
     { name : "장바구니", page : "/basket"}

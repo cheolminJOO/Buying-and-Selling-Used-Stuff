@@ -84,10 +84,6 @@ export default function TestPageUi (props : ITestPageUI) {
         }
         type='text'/>
       </S.AddressBox>
-      <S.TitleBox>
-        <S.Writer>유투브</S.Writer>
-        <S.TitleInput type='text' placeholder='링크를 복사해주세요' />
-      </S.TitleBox>
       <S.PhotoBox>
         <S.Writer>사진 첨부</S.Writer>
         {props.fileUrls.map((el, index) => (
@@ -99,12 +95,7 @@ export default function TestPageUi (props : ITestPageUI) {
             
         ))}
       </S.PhotoBox>
-      
-      <S.MainSetting>
-        <S.Writer>메인 설정</S.Writer>
-        <input type='radio'/>유투브
-        <input type='radio'/>사진
-      </S.MainSetting>
+
       <S.Btn type="submit" style={{backgroundColor : props?.formState?.isValid ? "yellow" : ""}}>{props.isEdit ? "수정하기" : "등록하기"}</S.Btn>
   </S.Box>
   </S.Container>

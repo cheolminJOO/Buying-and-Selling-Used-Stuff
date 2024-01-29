@@ -1,4 +1,5 @@
-import styled from "@emotion/styled";
+import styled from "styled-components"
+
 
 export const BigWrapper = styled.div`
   display: flex;
@@ -56,7 +57,7 @@ export const InputBox = styled.input`
 `
 
 export const TextArea = styled.textarea`
-  
+  width: 300px;
 
 `
 
