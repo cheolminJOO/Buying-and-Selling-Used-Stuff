@@ -51,9 +51,14 @@ export const WriterImg = styled.div`
 `
 
 export const AddressInput = styled.input`
+
+font-size: 20px;
 `
 
 export const AddressDetailInput = styled.input`
+
+font-size: 20px;
+margin-bottom: 20px;
 `
 
 export const EtcBox = styled.div`
@@ -75,14 +80,12 @@ export const VideoBox = styled.div`
 
 `
 export const Head = styled.div`
-  margin-top : 100px;
-  margin-bottom : 50px;
-  font-size : 20px;
+  font-size : 30px;
   font-weight : Bold;
+  margin-top: 20px;
 `
 
 export const ContentsDiv = styled.div`
-  display: flex;
 
 `
 
@@ -92,11 +95,19 @@ export const BigGrayBox = styled.div`
   background-color : #F2F2F2;
 `
 export const Word = styled.div`
-  margin-top : 50px;
-  font-size : 16px;
+  font-size : 30px;
   font-weight : 400;
   line-height : 23.68px;
   height : 96px;
+  margin-left: 70px;
+`
+
+export const ContentsWord = styled.div`
+  font-size : 22px;
+  font-weight : 400;
+  line-height : 30px;
+  height : 30px;
+  border: 1px solid black;
 `
 export const BtnBox = styled.div`
   width : 100%;
@@ -190,13 +201,13 @@ export const TitleInput = styled.input`
   margin : 15px 0;
 `
 export const Writer = styled.div`
-  font-size : 16px;
+  font-size : 30px;
   font-weight : 600;
 
 `
 
 export const SubFont = styled.div`
-  font-size : 10px;
+  font-size : 20px;
   font-weight : 300;
   color : gray;
 `
@@ -269,9 +280,9 @@ export const Error = styled.div`
 `
 
 export const Line = styled.div`
-  margin-top : 50px;
   width : 100%;
-  border-top : 1px gray solid;
+  border-top : 5px gray solid;
+  margin-bottom: 50px;
 `
 
 export const CommentBox = styled.div`

@@ -30,6 +30,9 @@ export default function BoardDetailUi (props : IBoardDetailUIProps) {
                 <S.Line></S.Line>
               </div>
               <S.BodyBox>
+                <S.Head>
+                  Address
+                </S.Head>
                 <S.AddressInput
                 type='text'
                 value={props.data?.fetchBoard?.boardAddress?.address}
@@ -41,23 +44,24 @@ export default function BoardDetailUi (props : IBoardDetailUIProps) {
                 />
                 )}
                 
-                <S.Head
-                style = {{color : "green"}}>
-                  제목 : {props.data?.fetchBoard.title}
+                <S.Head>
+                  Title
                 </S.Head>
-
-                
+                <S.AddressInput
+                type='text'
+                value={props.data?.fetchBoard.title}
+                />
                 {typeof window !== "undefined" && (
                 <S.ContentsDiv>
-                  <S.Word>내용 : </S.Word>
-                  <S.Word
-                style = {{color : "red"}}
+                  <S.Head>Contents </S.Head>
+                  <S.ContentsWord
                 dangerouslySetInnerHTML ={{
                  __html : DOMPurify.sanitize(props.data?.fetchBoard?.contents)
                 }}
                 />
                 </S.ContentsDiv>
                 )}
+                <S.Head>Photo </S.Head>
                 <S.WrapperPhotoBox>
                 {props.data?.fetchBoard.images?.filter((el) => el !== "")
                 .map((el)=> (  
