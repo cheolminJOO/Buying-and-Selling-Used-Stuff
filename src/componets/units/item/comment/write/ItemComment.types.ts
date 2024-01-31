@@ -1,9 +1,9 @@
 import { ChangeEvent } from "react";
 
 export interface IItemCommentProps {
-  isEdit : boolean;
-  setIsEdit : any;
-  el : any;
+  isEdit ?: boolean;
+  setIsEdit ?: any;
+  el ?: any;
 }
 
 export interface IItemCommentPageUi {

@@ -1,7 +1,7 @@
 import { ChangeEvent } from "react";
 
 export interface ItemWriteProps {
-  isEdit : boolean ;
+  isEdit ?: boolean ;
   data : any
 }
 

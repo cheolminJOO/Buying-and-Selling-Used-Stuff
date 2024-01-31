@@ -5,6 +5,6 @@ import ItemWrite from "../../../src/componets/units/item/write/ItemWrite.contain
 
 export default function ItemBoardPage() {
   useAuth()
-  
+  //@ts-expect-error
   return <ItemWrite isEdit={false}/>
 }
