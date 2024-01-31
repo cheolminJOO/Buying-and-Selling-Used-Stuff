@@ -11,6 +11,7 @@ import { IBoardCommentLishUI } from './BoardCOmmentList.types';
 export default function BoardCommentListUI(props : IBoardCommentLishUI) {
   const router = useRouter()
   const {data, fetchMore} = useQuery<Pick<IQuery,"fetchBoardComments">, IQueryFetchBoardCommentsArgs >(FETCH_BOARD_COMMENTS, {
+    //@ts-expect-error
     variables: {boardId : router.query.boardId}
     
   })

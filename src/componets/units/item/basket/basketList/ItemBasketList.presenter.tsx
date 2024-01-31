@@ -11,6 +11,7 @@ const BasketListUI : React.FC<IBasketEl> = ({el}) => {
   console.log("el",el)
 
   return(
+    //@ts-expect-error
     <S.Container onClick={onClickContainer(el?._id)}>
       <S.Box>
       <S.Category> 제목 : {el?.name}</S.Category>

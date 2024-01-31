@@ -18,12 +18,12 @@ export interface ITestPageWrite {
 }
 
 export interface IIsActive {
-  isActive : boolean
+  isActive ?: boolean
 }
 
 
 export interface ITestPageUI {
-  isActive: boolean;
+  isActive?: boolean;
   onClickAddressSearch?: () => void;
   onCompleteAddressSearch?: (data: any) => void;
   onChangeFileUrls?: (fileUrls: string, index: number) => void;

@@ -16,6 +16,7 @@ export default function TestPageUi (props : ITestPageUI) {
   }
 
   return (
+    
     <form onSubmit = {props.isEdit? props.handleSubmit(props.onClickEdit) : props.handleSubmit(props.onClickFinalSubmit)}>
       {props.isOpen && (
         <S.AddressModal 
@@ -95,7 +96,7 @@ export default function TestPageUi (props : ITestPageUI) {
             
         ))}
       </S.PhotoBox>
-
+      
       <S.Btn type="submit" style={{backgroundColor : props?.formState?.isValid ? "yellow" : ""}}>{props.isEdit ? "수정하기" : "등록하기"}</S.Btn>
   </S.Box>
   </S.Container>
