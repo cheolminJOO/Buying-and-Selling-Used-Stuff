@@ -9,7 +9,6 @@ import CommentAnswerPage from '../QandA/ItemCommentQandA.container'
 import React from 'react';
 import { UPDATE_USEDITEM_QUESTION } from '../write/ItemComment.queries'
 import Swal from 'sweetalert2'
-import AlertUnit from '../../../../commons/Alert/AlertUnit'
 interface ItemCommentListUIProps {
   el: any; // 또는 실제 타입으로 변경
 }
@@ -71,7 +70,15 @@ const ItemCommentListUI: React.FC<ItemCommentListUIProps> = ({ el }) => {
       variables: {useditemId : router.query.boardId}
     }]
   })
-  AlertUnit("댓글 삭제가 됐습니다.")
+  Swal.fire({
+    icon: 'info',
+    width: '400px',
+    title: `<span style="font-size: 20px; font-weight : bolder;"> 댓글 삭제가 됐습니다.</span>`,
+    confirmButtonText: '확인',
+    showLoaderOnConfirm: true,
+    allowOutsideClick: () => !Swal.isLoading(),
+    reverseButtons: true,
+  });
 }
 
   return (
