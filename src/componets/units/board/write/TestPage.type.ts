@@ -17,33 +17,33 @@ export interface ITestPageWrite {
   data : any
 }
 
+export interface IIsActive {
+  isActive : boolean
+}
+
 
 export interface ITestPageUI {
   isActive: boolean;
-  writerError: string;
-  passwordError: string;
-  titleError: string;
-  contentsError: string;
-  onChangeWriter: (event: ChangeEvent<HTMLInputElement>) => void;
-  onChangePassword: (event: ChangeEvent<HTMLInputElement>) => void;
-  onChangeTitle: (event: ChangeEvent<HTMLInputElement>) => void;
-  onChangeContents: (event: ChangeEvent<HTMLTextAreaElement>) => void;
-  onChangeYoutubeUrl: (event: ChangeEvent<HTMLInputElement>) => void;
-  onChangeAddressDetail: (event: ChangeEvent<HTMLInputElement>) => void;
-  onClickAddressSearch: () => void;
-  onCompleteAddressSearch: (data: any) => void;
-  onChangeFileUrls: (fileUrls: string, index: number) => void;
-  onClickSubmit: () => void;
-  onClickUpdate: () => void;
-  onClickEdit: (data : any) => void;
-  isEdit: boolean;
+  onClickAddressSearch?: () => void;
+  onCompleteAddressSearch?: (data: any) => void;
+  onChangeFileUrls?: (fileUrls: string, index: number) => void;
+  onClickEdit?: (data : any) => void;
+  isEdit?: boolean;
   data?: Pick<IQuery, "fetchBoard">;
-  isOpen: boolean;
-  zipcode: string;
-  address: string;
-  addressDetail: string;
-  fileUrls: string[];
-
+  isOpen?: boolean;
+  zipcode?: string;
+  address?: string;
+  fileUrls?: string[];
+  setValue ?: any;
+  trigger ?: any;
+  handleSubmit ?: any;
+  handleok ?: () => void;
+  formState ?: any;
+  register ?: any;
+  onChangeFile ?: any;
+  onClickFinalSubmit ?: any;
+  handlecancel : () => void;
+  aaa ?: any
 
 
 }

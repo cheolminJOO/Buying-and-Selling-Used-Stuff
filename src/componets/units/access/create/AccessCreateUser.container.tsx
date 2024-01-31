@@ -39,7 +39,7 @@ export default function CreateUserPage () {
     
     router.push('/login')
   }catch(error) {
-    if(error instanceof Error) Modal.error({content : error})
+    console.log("error")
   }
   }
 

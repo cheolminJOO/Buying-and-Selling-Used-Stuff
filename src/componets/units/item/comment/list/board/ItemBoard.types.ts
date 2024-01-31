@@ -5,7 +5,7 @@ export interface IItemBoardListUI {
   onChangeSearchInput : (event : ChangeEvent<HTMLInputElement>) => void;
   keyWord : string;
   onClickMoveToBoardNew : () => void;
-  onClickDetailedPage : (id :string ) => void;
+  onClickDetailedPage : any;
   refetch : any;
   count : number;
   onClickPick : (event : MouseEvent<HTMLButtonElement>) => void;

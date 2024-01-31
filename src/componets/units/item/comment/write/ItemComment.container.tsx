@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import ItemCommentPageUI from "./ItemComment.presenter";
-import { route } from "next/dist/server/router";
 import { useMutation } from "@apollo/client";
 import { IMutation, IMutationCreateUseditemQuestionArgs, IMutationUpdateUseditemQuestionArgs, IUpdateUseditemQuestionInput } from "../../../../../types/generated/types";
 import { ChangeEvent, useState } from "react";
@@ -8,7 +7,7 @@ import { CREATE_USEDITEM_QUESTION, UPDATE_USEDITEM_QUESTION } from "./ItemCommen
 import { FETCH_USEDITEM_QUESTION } from "../list/ItemConmmentList.queries";
 import Swal from "sweetalert2";
 import AlertUnit from "../../../../commons/Alert/AlertUnit";
-import { IItemCommentProps } from "./ItemComment.types";
+import { IItemCommentProps, IUpdateQuestion } from "./ItemComment.types";
 
 
 
@@ -40,7 +39,7 @@ export default function ItemCommentPage(props : IItemCommentProps) {
   }
   const onClickUpdateBtn = async() => {
      try {
-            const updateQuestion: IUpdateUseditemQuestionInput = {};
+            const updateQuestion: IUpdateQuestion = {};
             if (contents) updateQuestion.contents = contents;
             await updateUseditemQuestion ({
               variables : {

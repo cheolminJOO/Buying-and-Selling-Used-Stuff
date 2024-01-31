@@ -2,12 +2,10 @@ import { useMutation } from "@apollo/client";
 import { useRouter } from "next/router";
 import { ChangeEvent, useState } from "react";
 import BoardCommentWriteUI from "./BoardCommentWrite.presenter";
-import { FETCH_BOARD_COMMENTS } from "../list/BoardCommentList.queries";
+
 import { CREATE_BOARD_COMMENT } from "./BoardCommentWrite.queries";
-import {
-  IMutation,
-  IMutationCreateBoardCommentArgs,
-} from "../../../../commons/types/generated/types";
+import { FETCH_BOARD_COMMENTS } from "../../../../board/comment/list/BoardCommentList.queries";
+
 
 export default function BoardCommentWrite() {
   const router = useRouter();
@@ -15,20 +13,17 @@ export default function BoardCommentWrite() {
   const [password, setPassword] = useState("");
   const [contents, setContents] = useState("");
 
-  const [createBoardComment] = useMutation<
-    Pick<IMutation, "createBoardComment">,
-    IMutationCreateBoardCommentArgs
-  >(CREATE_BOARD_COMMENT);
+  const [createBoardComment] = useMutation(CREATE_BOARD_COMMENT);
 
-  const onChangeWriter = (event: ChangeEvent<HTMLInputElement>) => {
+  const onChangeWriter = (event) => {
     setWriter(event.target.value);
   };
 
-  const onChangePassword = (event: ChangeEvent<HTMLInputElement>) => {
+  const onChangePassword = (event) => {
     setPassword(event.target.value);
   };
 
-  const onChangeContents = (event: ChangeEvent<HTMLTextAreaElement>) => {
+  const onChangeContents = (event) => {
     setContents(event.target.value);
   };
 

@@ -19,7 +19,7 @@ export default function DetailedBoard () {
 
 
 
-  const onClickDetailedPage = (event) => {
+  const onClickDetailedPage = (event : any) => {
   router.push(`/boards/${event.target.id}`)
 
   }

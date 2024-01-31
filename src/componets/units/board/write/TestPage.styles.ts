@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Modal } from 'antd';
 import DaumPostcodeEmbed from 'react-daum-postcode';
+import { IIsActive } from './TestPage.type';
 
 export const Box = styled.div`
 width: 1000px;
@@ -139,7 +140,7 @@ export const EmailInput = styled.input`
   width: 200px;
 `
 
-export const Btn = styled.button`
+export const Btn = styled.button<IIsActive>`
   background-color: ${props => props.isActive ? "yellow" : "default"};
   border : none;
   font-size : 10px;

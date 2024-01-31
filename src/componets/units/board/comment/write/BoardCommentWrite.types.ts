@@ -9,13 +9,13 @@ export interface ICommentData {
 
 
 export interface ICommentPageUI {
-  onChangeStar : () => void;
-  onChangeComment : (event : ChangeEvent<HTMLInputElement>) => void;
+  onChangeStar ?: () => void;
+  onChangeComment : (event : ChangeEvent<HTMLTextAreaElement>) => void;
   isEdit : boolean ;
   el : any;
   setIsEdit : any;
-  onClickEditBtn : () => void;
-  onClickSub : () => void;
+  onClickEditBtn ?: () => void;
+  onClickSub : any;
   register : any;
   handleSubmit : any;
   formState : any;

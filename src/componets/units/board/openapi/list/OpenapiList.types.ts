@@ -12,7 +12,4 @@ export default function OpenapiList() {
     }
     void qqq()
   }, [])
-  return (
-
-  )
 }

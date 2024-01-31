@@ -16,3 +16,8 @@ export interface IItemCommentPageUi {
   el : any;
 
 }
+
+export interface IUpdateQuestion {
+  contents ?: string;
+
+}

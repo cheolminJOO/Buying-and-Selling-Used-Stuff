@@ -1,4 +1,3 @@
-import { CreatedAt } from './../../../board/write/board/detail/BoardDetail.styles';
 import { gql } from "@apollo/client";
 
 export const CREATE_QNA = gql`

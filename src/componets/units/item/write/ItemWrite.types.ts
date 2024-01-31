@@ -30,7 +30,7 @@ export interface IItemWritePresenter {
   fileUrls : any
   register : any
   handleSubmit : any
-  formstate : any
+  formState : any
   onUseHook : (data : IItemData) => void;
   onChangekeyWord : (event : ChangeEvent<HTMLInputElement>) => void;
 

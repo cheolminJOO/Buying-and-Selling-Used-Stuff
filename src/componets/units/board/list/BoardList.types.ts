@@ -6,16 +6,14 @@ import { IQuery, IQueryFetchBoardsArgs } from "../../../../types/generated/types
 export interface IBoardListUIProps {
   data?: Pick<IQuery, "fetchBoards">;
   onClickMoveToBoardNew: () => void;
-  onClickMoveToBoardDetail: (event: MouseEvent<HTMLDivElement>) => void;
   refetch: (
     variables?: Partial<IQueryFetchBoardsArgs> | undefined
   ) => Promise<ApolloQueryResult<Pick<IQuery, "fetchBoards">>>;
-  refetchBoardsCount: (
-    variables: Partial<OperationVariables>
-  ) => Promise<ApolloQueryResult<Pick<IQuery, "fetchBoardsCount">>>;
   count?: number;
-  keyword: string;
-  onChangeKeyword: (value: string) => void;
+  keyWord: string;
+
+  onClickDetailedPage : (event : any) => void;
+  onChangeSearchInput : any
 }
 
 export interface ITextTokenProps {

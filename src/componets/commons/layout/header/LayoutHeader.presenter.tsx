@@ -13,7 +13,7 @@ result : any
 accessToken : any
 data : any
 isActive : boolean
-token : string
+token ?: any
 profileImage : any
 
 }

@@ -1,8 +1,8 @@
 
+import { getDate } from "../../../../commons/utills/utill";
 import Pagination01 from "../../../commons/pagination/01/Pagination01.container";
 import * as S from "./BoardList.styles"
 import { IBoardListUIProps } from "./BoardList.types";
-import { getDate } from "/src/commons/utills/utill"
 
 export default function BoardListV (props : IBoardListUIProps) {
   const onClickBasket = (basket) => () => {
@@ -42,7 +42,7 @@ export default function BoardListV (props : IBoardListUIProps) {
     {props.data?.fetchBoards.map((el, index) => (
     <div
     >
-      <S.Row key={el.id}>
+      <S.Row key={el._id}>
         <S.ColumnId>{index +1}</S.ColumnId>
         <S.ColumnTitle 
         id={el._id}

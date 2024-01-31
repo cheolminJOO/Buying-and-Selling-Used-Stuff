@@ -42,7 +42,7 @@ export default function CommentPage (props) {
     alert("정상적으로 댓글이 달렸습니다.")
   }
 
-  const onChangeComment = (event : ChangeEvent<HTMLInputElement>) => {
+  const onChangeComment = (event : ChangeEvent<HTMLTextAreaElement>) => {
     setContents(event.target.value)
   }
   
