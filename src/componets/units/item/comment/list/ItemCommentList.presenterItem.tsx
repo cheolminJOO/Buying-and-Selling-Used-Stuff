@@ -1,16 +1,15 @@
 import { useState } from 'react'
 import { getDate } from '../../../../../commons/utills/utill'
 import * as S from './ItemCommentList.styles'
-import ItemCommentPage from '../write/ItemComment.container'
 import { useMutation } from '@apollo/client'
-import { IMutation, IMutationDeleteUseditemQuestionArgs, IMutationUpdateUseditemQuestionArgs, IUpdateUseditemQuestionInput } from '../../../../../types/generated/types'
-import { CREATE_USEDITEM_QUESTION_ANSWER, DELETE_USEDITEM_QUESTION, FETCH_USEDITEM_QUESTION } from './ItemConmmentList.queries'
+import { IMutation, IMutationDeleteUseditemQuestionArgs, IMutationUpdateUseditemQuestionArgs} from '../../../../../types/generated/types'
+import { DELETE_USEDITEM_QUESTION, FETCH_USEDITEM_QUESTION } from './ItemConmmentList.queries'
 import { useRouter } from 'next/router'
 import CommentAnswerPage from '../QandA/ItemCommentQandA.container'
 import React from 'react';
-import AlertUnit from '../../../../commons/Alert/AlertUnit'
 import { UPDATE_USEDITEM_QUESTION } from '../write/ItemComment.queries'
 import Swal from 'sweetalert2'
+import AlertUnit from '../../../../commons/Alert/AlertUnit'
 interface ItemCommentListUIProps {
   el: any; // 또는 실제 타입으로 변경
 }

@@ -5,7 +5,6 @@ import { IMutation, IMutationCreateUseditemQuestionArgs, IMutationUpdateUseditem
 import { ChangeEvent, useState } from "react";
 import { CREATE_USEDITEM_QUESTION, UPDATE_USEDITEM_QUESTION } from "./ItemComment.queries";
 import { FETCH_USEDITEM_QUESTION } from "../list/ItemConmmentList.queries";
-import Swal from "sweetalert2";
 import AlertUnit from "../../../../commons/Alert/AlertUnit";
 import { IItemCommentProps, IUpdateQuestion } from "./ItemComment.types";
 
