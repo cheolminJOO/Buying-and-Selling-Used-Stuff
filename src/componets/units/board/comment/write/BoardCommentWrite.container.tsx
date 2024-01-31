@@ -58,7 +58,6 @@ export default function CommentPage (props) {
       formState={formState}
       onChangeComment={onChangeComment}
       contents={contents}
-      >
-    </CommentPageUi>
+      />
   )
 }

@@ -47,10 +47,8 @@ export default function DetailedBoard () {
     onClickDetailedPage={onClickDetailedPage}
     refetch={refetch}
     count={list?.fetchBoardsCount}
+    />
 
-    >
-      
-    </BoardListV>
   )
 
 }

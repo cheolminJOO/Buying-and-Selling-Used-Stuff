@@ -31,7 +31,6 @@ export default function DetailedPage (props) {
     data = {data}
     onClickDelete = {onClickDelete}
     onClickMoveToPage = {onClickMoveToPage}
-    >
-    </BoardDetailUi>
+    />
   )
 }

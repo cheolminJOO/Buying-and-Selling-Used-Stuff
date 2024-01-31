@@ -136,7 +136,6 @@ export default function TestPage (props : ITestPageWrite) {
       trigger={trigger}
       handleok={handleok}
       handlecancel={handlecancel}
-      >
-    </TestPageUi>
+      />
   )
 }

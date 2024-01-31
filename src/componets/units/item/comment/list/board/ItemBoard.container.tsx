@@ -52,10 +52,8 @@ export default function ItemBoard () {
     refetch={refetch}
     count={list?.fetchBoardsCount}
     onClickPick={onClickPick}
+    />
 
-    >
-      
-    </ItemBoardListUI>
   )
 
 }
