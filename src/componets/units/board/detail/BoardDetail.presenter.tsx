@@ -3,6 +3,7 @@ import { getDate } from '/src/commons/utills/utill'
 import * as S from './BoardDetail.styles'
 import DOMPurify from 'dompurify'
 import Tooltip from '../../../commons/hooks/tooltip/tooltip'
+import { IBoardDetailUIProps } from './BoardDetail.types'
 export default function BoardDetailUi (props : IBoardDetailUIProps) {
 
   return(
