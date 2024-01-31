@@ -27,6 +27,7 @@ export default function ItemCommentPage(props : IItemCommentProps) {
         createUseditemQuestionInput:{
           contents
         },
+        //@ts-expect-error
         useditemId : router.query.boardId,
       },
       refetchQueries: [{
@@ -43,6 +44,7 @@ export default function ItemCommentPage(props : IItemCommentProps) {
             if (contents) updateQuestion.contents = contents;
             await updateUseditemQuestion ({
               variables : {
+                //@ts-expect-error
                 updateUseditemQuestionInput : updateQuestion,
                 useditemQuestionId : props.el?._id
               },

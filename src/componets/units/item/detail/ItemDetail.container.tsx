@@ -19,6 +19,7 @@ export default function ItemPage () {
     return<></>
   }
   const {data} = useQuery<Pick<IQuery,"fetchUseditem">,IQueryFetchUseditemArgs>(FETCH_USED_ITEM, {
+    //@ts-expect-error
     variables : { useditemId : router.query.boardId}
   })
   console.log(data)

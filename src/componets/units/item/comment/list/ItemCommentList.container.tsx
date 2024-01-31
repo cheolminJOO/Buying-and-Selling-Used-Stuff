@@ -7,6 +7,7 @@ export default function ItemCommentList () {
   const router= useRouter();
 
   const {data} = useQuery<Pick<IQuery,"fetchUseditemQuestions">,IQueryFetchUseditemQuestionsArgs>(FETCH_USEDITEM_QUESTION, {
+    //@ts-expect-error
     variables : {useditemId : router.query?.boardId}
   })
   console.log(data)
