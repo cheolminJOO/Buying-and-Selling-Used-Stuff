@@ -1,7 +1,7 @@
 ## BUSU (Bying Used item & Selling Used item)
 
 Tech Stack
- - Next.js, graphQL,  React-hook-form, TypeScript, CRA, Styled-Components, Github
+ - Next.js, graphQL,  React-hook-form, TypeScript, CRA, Emotion, Github
 
 주요기능
  - 주소 찾기 ( 카카오 MAP, 카카오 주소찾기 api )
