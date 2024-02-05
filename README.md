@@ -48,7 +48,7 @@ Tech Stack
     <td><strong>중고상품 글 작성</strong></td>
   </tr>
    <tr align="center">
-    <td><img src="https://lv4lv4task.s3.ap-northeast-2.amazonaws.com/usedboard+write.gif" alt="중고상품 글 작성" style="height:500px, width:800px"/></td>
+    <td><img src="https://lv4lv4task.s3.ap-northeast-2.amazonaws.com/used.gif" alt="중고상품 글 작성" style="height:500px, width:800px"/></td>
   </tr>
 </table>
 <table>
@@ -64,7 +64,7 @@ Tech Stack
     <td><strong>마이 펫</strong></td>
   </tr>
    <tr align="center">
-    <td><img src="https://hanghaelv4.s3.ap-northeast-2.amazonaws.com/pet.gif" alt="마이펫" style="height:500px, width:800px"/></td>
+    <td><img src="https://lv4lv4task.s3.ap-northeast-2.amazonaws.com/pet.gif" alt="마이펫" style="height:500px, width:800px"/></td>
   </tr>
 </table>
 
