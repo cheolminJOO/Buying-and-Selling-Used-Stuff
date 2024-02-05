@@ -14,13 +14,9 @@ Tech Stack
 <table>
   <tr align="center">
     <td><strong>주소 찾기</strong></td>
-    <td><strong>잡담 게시판</strong></td>
-    <td><strong>잡담 게시판 글 작성</strong></td>
   </tr>
    <tr align="center">
     <td><img src="https://hanghaelv4.s3.ap-northeast-2.amazonaws.com/gossipboard.gif" alt="잡담 게시판" style="height:500px"/></td>
-    <td><img src="https://hanghaelv4.s3.ap-northeast-2.amazonaws.com/write+new+article.gif" alt="잡담 게시판 글 작성" style="height:500px"/></td>
-    <td><img src="https://hanghaelv4.s3.ap-northeast-2.amazonaws.com/comment.gif" alt="댓글" style="height:500px"/></td>
   </tr>
 </table>
 
