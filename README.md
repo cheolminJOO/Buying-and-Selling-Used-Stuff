@@ -48,7 +48,7 @@ Tech Stack
     <td><strong>중고상품 글 작성</strong></td>
   </tr>
    <tr align="center">
-    <td><img src="/usedboard write.gif" alt="중고상품 글 작성" style="height:500px, width:800px"/></td>
+    <td><img src="https://lv4lv4task.s3.ap-northeast-2.amazonaws.com/usedboard+write.gif" alt="중고상품 글 작성" style="height:500px, width:800px"/></td>
   </tr>
 </table>
 <table>
