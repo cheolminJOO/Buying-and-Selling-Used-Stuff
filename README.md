@@ -13,3 +13,5 @@ Tech Stack
 
 데모 사이트 주소
  - https://buying-and-selling-used-stuff-hugg.vercel.app
+
+ <img src = ''>

@@ -35,7 +35,8 @@ export default function LayoutHeaderUI (props: ILayoutHeaderUIProps ) {
               {props.data?.fetchUserLoggedIn.picture && (
             <S.ImgStyle 
             onClick={props.onClickImg}
-            src={props.profileImage || props.data?.fetchUserLoggedIn.picture}/>
+            src={props.profileImage || '/avatar.png'}/>
+            
             )}
             {!props.data?.fetchUserLoggedIn.picture && (
               <S.ImgStyle

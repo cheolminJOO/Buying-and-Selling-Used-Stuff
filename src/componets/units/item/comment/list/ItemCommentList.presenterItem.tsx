@@ -87,7 +87,7 @@ const ItemCommentListUI: React.FC<ItemCommentListUIProps> = ({ el }) => {
     <S.BigWrapper>
       <S.Wrapper>
         <S.LeftContentsWrapper>
-          <S.AvatarImg src={el.user.picture}/>
+          <S.AvatarImg src={'/avatar.png'}/>
             <S.TextWrapper>
               <S.Writer>
                 {el.user.name}

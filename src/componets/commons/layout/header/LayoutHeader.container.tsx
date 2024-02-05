@@ -20,7 +20,7 @@ export default function LayoutHeader () {
   const [isActive, setIsActive] = useState(false)
   const {onClickMoveToPage} = useMoveToPage()
   const [profileImage, setProfileImage] = useRecoilState(myImage)
-console.log("헤더",data)
+console.log("헤더",data?.fetchUserLoggedIn.picture)
 console.log("나도 찍히니?")
   const result =() => {
     if(accessToken){

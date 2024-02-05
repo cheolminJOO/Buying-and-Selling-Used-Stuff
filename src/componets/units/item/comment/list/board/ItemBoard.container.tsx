@@ -1,11 +1,12 @@
 import { useMutation, useQuery } from "@apollo/client"
-import { ChangeEvent, MouseEvent, useState } from "react";
+import { ChangeEvent, MouseEvent, useEffect, useState } from "react";
 import _ from 'lodash'
 import { useRouter } from "next/router";
 import ItemBoardListUI from "./ItemlBoard.presenter";
 import { FETCH_COUNT, FETCH_USED_ITEMS, TOGGLE_ITEM_PICK } from "./ItemBoard.queries";
 
 export default function ItemBoard () {
+
   const {data, refetch} = useQuery(FETCH_USED_ITEMS)
   console.log("나는 무슨 데이터일까 ? ", data)
   const [keyWord,setKeyWord] = useState("")
@@ -33,8 +34,9 @@ export default function ItemBoard () {
     
   }
 
-  const onClickDetailedPage = async(id :string ) =>  {
-  await router.push(`/item/${id}`)
+  const onClickDetailedPage = (id :string ) => (event) =>  {
+   router.push(`/item/${id}`)
+   event.stopPropagation();
   }
 
   

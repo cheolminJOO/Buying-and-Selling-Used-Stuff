@@ -62,8 +62,6 @@ export default function MyPage () {
   }
 
   const onClickUpdateBtn = async () => {
-//@ts-expect-error
-    const myVariable : IMyProfile = {}
     try {
       // updateUser 뮤테이션 실행
       const result = await updateUser({

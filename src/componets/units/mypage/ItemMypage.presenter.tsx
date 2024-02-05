@@ -35,14 +35,12 @@ export default function MyPageUI (props) {
           이미지
         </S.InputTitle>
         <S.PictureWrapper>
-
-          
           <input style=
             {{display:"none"}}
             type="file" 
             onChange={props.onChangeImage}
             ref={props.fileRef}/>
-            <S.ImageSpace src = {props.image || props?.data?.fetchUserLoggedIn.picture}/>
+            <S.ImageSpace src = {props.image || '/avatar.png'}/>
             {isEdit && (
             <S.SubmitBtn onClick={props.onClickRef}>사진 바꾸기</S.SubmitBtn>
             )}
